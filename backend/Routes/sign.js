@@ -1,7 +1,11 @@
 const express = require('express')
-const bcrypt = require('bcrypt')
-const user = require('../Models/user');
 const { Router } = require('express');
+const bcrypt = require('bcrypt')
+const mongoose = require('mongoose')
+const user = require('../Models/user');
+const jwt = require('jsonwebtoken');
+const {JWT_TOKEN} = require('../config/key')
+const requireLogin = require('../middleware/requireLogin')
 
 const router = Router();
 
@@ -52,7 +56,12 @@ router.post('/signin',(req,res)=>{
         bcrypt.compare(password,saveduser.password)
         .then(domatch=>{
             if(domatch){
-               res.status(200).json({message:'successfully signed in'}) 
+              // res.status(200).json({message:'successfully signed in'}) 
+               const token = jwt.sign({_id:saveduser._id},JWT_TOKEN)
+               console.log("token is:",token) 
+               res.status(200).json(token)
+                // const {_id,name,email,ContactNo} = saveduser
+                // res.json({token,user:{_id,name,email,ContactNo}})
             }else{
                 res.status(422).json({message:'invalid email or password'})     
             }

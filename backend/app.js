@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const PORT =5000
 const mongourl = require('./config/key')
 
-mongoose.connect(mongourl,{ useNewUrlParser: true ,useUnifiedTopology: true})
+mongoose.connect(mongourl.MONGOURL,{ useNewUrlParser: true ,useUnifiedTopology: true})
 .then(()=>console.log('mongodb connected'))
 .catch((err)=>console.log(err))
 require('./Models/user')

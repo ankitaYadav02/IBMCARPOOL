@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const { ObjectId } = mongoose.Schema.Types;
 const healthSchema = new mongoose.Schema({
-    drycough:{
+    DryCough:{
         type:Boolean,
         require:true,
         default:false
