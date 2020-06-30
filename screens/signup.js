@@ -1,7 +1,8 @@
 import React ,{useState}from 'react';
-import { StyleSheet, Text,Image ,ScrollView, TextInput,TouchableNativeFeedback } from 'react-native';
+import { StyleSheet, Text,Image ,ScrollView, TextInput,TouchableNativeFeedback, View } from 'react-native';
 import {Button,Appbar} from 'react-native-paper'
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import LottieView from 'lottie-react-native';
 
   function SignUp (props) {
     const [name, setName] = useState("");
@@ -24,25 +25,15 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
     }).then(res => res.json())
       .then(data => {
         console.log(data)
+        props.navigation.navigate('SignIn')
       }).catch(err => {
         console.log(err)
       })
   }
   return (
     <ScrollView >
-      <Appbar.Header>
-        {/* <Appbar.BackAction
-          onPress={this._goBack}
-        /> */}
-        <Appbar.Content
-        style={styles.Header}
-          title="Sign Up Your Account"
-        />
-      </Appbar.Header>
-      <Image
-        style={styles.logo}
-        source={require('../assets/car2.png')}
-      />
+      <LottieView style={styles.logo} source={require('../car.json')} autoPlay loop />
+      <View style={{marginTop:30}}>
       <TextInput
           style={styles.input}
           placeholder='Username'
@@ -72,14 +63,14 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
           placeholderTextColor='black'
           onChangeText = {(text)=>setContactNo(text)}
         />
-{/* <Button>Submit me</Button> */}
         <Button style={styles.buttons} onPress={() =>{SubmitDetails()
-          props.navigation.navigate('Check')
-        
-      }}>Sign Up</Button>
+        props.navigation.navigate('Check')
+        }}>Sign Up</Button>
         <TouchableOpacity>
         <Text style={styles.fonts}onPress={() =>props.navigation.navigate('SignIn')}>Have An Account?</Text>
         </TouchableOpacity>
+      </View>
+    
         
     </ScrollView>
     
@@ -100,10 +91,9 @@ const styles = StyleSheet.create({
     margin: 10,
     padding: 8,
     color: 'black',
-    // borderRadius: 14,
     fontSize: 18,
     fontWeight: '500',
-    marginLeft:50
+    marginLeft:50,
   },
   buttons:{
     width: 250,
@@ -112,24 +102,28 @@ const styles = StyleSheet.create({
     margin: 10,
     padding: 8,
     color: 'white',
-    // borderRadius: 14,
     fontSize: 18,
     fontWeight: '500',
     marginLeft:40
   },
   fonts:{
     fontSize:18,
-    marginLeft:100
+    marginLeft:100,
   },
   logo: {
     width: 90,
     height: 90,
     marginTop:20,
-    marginLeft:130
   },
   Header:{
-    alignItems:"center"
-  }
+    alignItems:"center",
+
+  },
+  // Appbar:{
+  //   height:50,
+  //   width:300,
+  //   backgroundColor:'white'
+  // }
 });
 
 

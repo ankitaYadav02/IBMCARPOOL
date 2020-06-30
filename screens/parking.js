@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet,Image, View, TextInput } from 'react-native';
 import { Button, Appbar } from 'react-native-paper'
-
+import LottieView from 'lottie-react-native';
 function Parking(props) {
   return (
     <View >
@@ -10,15 +10,11 @@ function Parking(props) {
             onPress={props.navigation.goBack}
           />
         <Appbar.Content
-        style={styles.Header}
           title="Search Parking"
         />
       </Appbar.Header>
       < View>
-        <Image
-          style={styles.logo}
-          source={require('../assets/car2.png')}
-        />
+      <LottieView style={styles.logo} source={require('../car.json')} autoPlay loop />
         <TextInput
           label='Enter Destination'
           style={styles.input}
@@ -55,7 +51,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '500',
     marginLeft:90,
-    marginTop:50
+    marginTop:90
   },
   buttons:{
     width: 250,
@@ -76,10 +72,6 @@ const styles = StyleSheet.create({
   logo: {
     width: 90,
     height: 90,
-    marginTop:70,
-    marginLeft:130
+    marginTop:50,
   },
-  Header:{
-    alignItems:"center"
-  }
 });

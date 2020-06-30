@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import { Appbar } from 'react-native-paper'
-
+import {  Dimensions } from "react-native";
 
 import {
   AppRegistry,
@@ -24,25 +24,23 @@ class HealthScanScreen extends Component {
   };
 
   render() {
+    const SCREEN_HEIGHT = Dimensions.get("window").height;
     return (
-      <View style={{backgroundColor:'black'}}>
-        <Appbar.Header>
+      //backgroundColor: '#00000000',opacity:.4
+      <View >
+        <Appbar.Header >
           <Appbar.BackAction
             onPress={this.props.navigation.goBack}
           />
           <Appbar.Content
             style={styles.Header}
             title="Scan Here"
-          />
-        </Appbar.Header>
+          /> 
+         </Appbar.Header>
         <QRCodeScanner
-       
+        style={{backgroundColor:'#111211'}}
           onRead={this.onSuccess}
-          // bottomContent={
-          //   <TouchableOpacity style={styles.buttonTouchable}>
-          //     <Text style={styles.buttonText}>OK. Got it!</Text>
-          //   </TouchableOpacity>
-        //}
+          cameraStyle={{ height: SCREEN_HEIGHT }}
       />
       </View>
     );
@@ -55,7 +53,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     padding: 32,
     color: '#777'
-  },
+  }
 });
 
 AppRegistry.registerComponent('default', () => HealthScanScreen);

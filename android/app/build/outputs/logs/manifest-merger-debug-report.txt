@@ -5,10 +5,13 @@ INJECTED from C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\And
 INJECTED from C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:1:1-38:12
 INJECTED from C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:1:1-38:12
 MERGED from C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:1:1-38:12
+MERGED from [:react-native-video] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-video\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.flipper:flipper:0.33.1] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\4c104f7cdfc8133d2b4d9daa25f5c04c\jetified-flipper-0.33.1\AndroidManifest.xml:8:1-18:12
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.33.1] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\fa9d249d56579007dba70f8ee4dd5b3f\flipper-network-plugin-0.33.1\AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.33.1] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\5a1065d4748ae359265a740b2069d44b\flipper-fresco-plugin-0.33.1\AndroidManifest.xml:8:1-15:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\2c67e628ec5e10a6dc480e38352e91b8\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [:lottie-react-native] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\lottie-react-native\src\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-community_async-storage] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\@react-native-community\async-storage\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-community_masked-view] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\@react-native-community\masked-view\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-ble-manager] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-ble-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:react-native-camera] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-camera\android\build\intermediates\library_manifest\generalDebug\AndroidManifest.xml:2:1-18:12
@@ -21,10 +24,14 @@ MERGED from [:react-native-screens] C:\Users\ankita\Desktop\car_ppool\CarPool\no
 MERGED from [:react-native-vector-icons] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-23:12
 MERGED from [com.facebook.react:react-native:0.62.2] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\17ccfe5a1614ce7ba9d49f8185d05b66\jetified-react-native-0.62.2\AndroidManifest.xml:2:1-13:12
+MERGED from [com.airbnb.android:lottie:3.0.7] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\d0b81474ae7aaf80ad4a72dacacdc0b4\lottie-3.0.7\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\7b4521e09033db39989053c4a0984cc2\material-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\2b7e6ebaa515cd43f42fb356f0d1941c\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\a430ff083c3ccb9e6346144a5dd2ced9\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\a0cc55542e7f80901507e4e652970d1e\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\055a171d10c43231a2795117ecd4c3fd\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [org.webkit:android-jsc:r245459] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\1ed26cdc1f47a6754ce1546799dd43a1\android-jsc-r245459\AndroidManifest.xml:2:1-11:12
+MERGED from [com.yqritc:android-scalablevideoview:1.0.4] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\ab73cc61e0ae26a077a2b66c4c69d4aa\jetified-android-scalablevideoview-1.0.4\AndroidManifest.xml:2:1-12:12
 MERGED from [com.facebook.fresco:flipper:2.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\c180792e3f393fe4453d9c695595b3ef\flipper-2.0.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:stetho:2.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\14649b8b71802f359f24d4f29dd55d6b\stetho-2.0.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:fresco:2.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\83ef104dfb430f397d92e4759e916162\fresco-2.0.0\AndroidManifest.xml:2:1-9:12
@@ -35,8 +42,6 @@ MERGED from [com.facebook.fresco:imagepipeline:2.0.0] C:\Users\ankita\.gradle\ca
 MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\3b198830d922c7c36b5728d232b5dfa2\nativeimagetranscoder-2.0.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\8b504391aa72c1fccbfde5f9aecf364d\imagepipeline-base-2.0.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.soloader:soloader:0.8.2] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\a682a4f61b53a5eb0b34ff17728f4b20\soloader-0.8.2\AndroidManifest.xml:2:1-13:12
-MERGED from [com.google.android.material:material:1.1.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\7b4521e09033db39989053c4a0984cc2\material-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\2b7e6ebaa515cd43f42fb356f0d1941c\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\3eb43dcc83336306d77ef63b3402a327\appcompat-resources-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\edab9a506dbd8c78a6f1a18fc4eb209e\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\3e974e7e51555c82be5b9fd468966b2b\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -108,6 +113,8 @@ uses-permission#android.permission.INTERNET
 ADDED from C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:4:5-67
 MERGED from [com.facebook.flipper:flipper:0.33.1] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\4c104f7cdfc8133d2b4d9daa25f5c04c\jetified-flipper-0.33.1\AndroidManifest.xml:15:5-67
 MERGED from [com.facebook.flipper:flipper:0.33.1] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\4c104f7cdfc8133d2b4d9daa25f5c04c\jetified-flipper-0.33.1\AndroidManifest.xml:15:5-67
+MERGED from [:lottie-react-native] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\lottie-react-native\src\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-67
+MERGED from [:lottie-react-native] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\lottie-react-native\src\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-67
 MERGED from [:react-native-maps] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-67
 MERGED from [:react-native-maps] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-67
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\dcb0caa0b7590c92c93c5bf3cc09a745\play-services-maps-17.0.0\AndroidManifest.xml:24:5-67
@@ -126,10 +133,12 @@ MERGED from [:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\no
 MERGED from [:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-21:19
 MERGED from [com.facebook.react:react-native:0.62.2] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\17ccfe5a1614ce7ba9d49f8185d05b66\jetified-react-native-0.62.2\AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.react:react-native:0.62.2] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\17ccfe5a1614ce7ba9d49f8185d05b66\jetified-react-native-0.62.2\AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.soloader:soloader:0.8.2] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\a682a4f61b53a5eb0b34ff17728f4b20\soloader-0.8.2\AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.soloader:soloader:0.8.2] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\a682a4f61b53a5eb0b34ff17728f4b20\soloader-0.8.2\AndroidManifest.xml:11:5-20
+MERGED from [com.airbnb.android:lottie:3.0.7] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\d0b81474ae7aaf80ad4a72dacacdc0b4\lottie-3.0.7\AndroidManifest.xml:9:5-20
+MERGED from [com.airbnb.android:lottie:3.0.7] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\d0b81474ae7aaf80ad4a72dacacdc0b4\lottie-3.0.7\AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\7b4521e09033db39989053c4a0984cc2\material-1.1.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\7b4521e09033db39989053c4a0984cc2\material-1.1.0\AndroidManifest.xml:22:5-20
+MERGED from [com.facebook.soloader:soloader:0.8.2] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\a682a4f61b53a5eb0b34ff17728f4b20\soloader-0.8.2\AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.8.2] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\a682a4f61b53a5eb0b34ff17728f4b20\soloader-0.8.2\AndroidManifest.xml:11:5-20
 MERGED from [com.google.android.gms:play-services-vision:17.0.2] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\1aa812d92e34f58ff15ac5a06e78b5bd\play-services-vision-17.0.2\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-vision:17.0.2] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\1aa812d92e34f58ff15ac5a06e78b5bd\play-services-vision-17.0.2\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\dcb0caa0b7590c92c93c5bf3cc09a745\play-services-maps-17.0.0\AndroidManifest.xml:30:5-36:19
@@ -228,6 +237,8 @@ uses-sdk
 INJECTED from C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml
+MERGED from [:react-native-video] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-video\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-video] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-video\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.flipper:flipper:0.33.1] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\4c104f7cdfc8133d2b4d9daa25f5c04c\jetified-flipper-0.33.1\AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper:0.33.1] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\4c104f7cdfc8133d2b4d9daa25f5c04c\jetified-flipper-0.33.1\AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.33.1] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\fa9d249d56579007dba70f8ee4dd5b3f\flipper-network-plugin-0.33.1\AndroidManifest.xml:11:5-13:41
@@ -236,6 +247,10 @@ MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.33.1] C:\Users\ankita\
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.33.1] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\5a1065d4748ae359265a740b2069d44b\flipper-fresco-plugin-0.33.1\AndroidManifest.xml:11:5-13:41
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\2c67e628ec5e10a6dc480e38352e91b8\multidex-2.0.0\AndroidManifest.xml:20:5-43
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\2c67e628ec5e10a6dc480e38352e91b8\multidex-2.0.0\AndroidManifest.xml:20:5-43
+MERGED from [:lottie-react-native] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\lottie-react-native\src\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:lottie-react-native] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\lottie-react-native\src\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_async-storage] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\@react-native-community\async-storage\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_async-storage] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\@react-native-community\async-storage\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_masked-view] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\@react-native-community\masked-view\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_masked-view] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\@react-native-community\masked-view\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-ble-manager] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-ble-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
@@ -260,6 +275,12 @@ MERGED from [:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\no
 MERGED from [:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.62.2] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\17ccfe5a1614ce7ba9d49f8185d05b66\jetified-react-native-0.62.2\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.62.2] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\17ccfe5a1614ce7ba9d49f8185d05b66\jetified-react-native-0.62.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.airbnb.android:lottie:3.0.7] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\d0b81474ae7aaf80ad4a72dacacdc0b4\lottie-3.0.7\AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:lottie:3.0.7] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\d0b81474ae7aaf80ad4a72dacacdc0b4\lottie-3.0.7\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\7b4521e09033db39989053c4a0984cc2\material-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\7b4521e09033db39989053c4a0984cc2\material-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\2b7e6ebaa515cd43f42fb356f0d1941c\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\2b7e6ebaa515cd43f42fb356f0d1941c\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\a430ff083c3ccb9e6346144a5dd2ced9\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\a430ff083c3ccb9e6346144a5dd2ced9\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\a0cc55542e7f80901507e4e652970d1e\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
@@ -268,6 +289,8 @@ MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\anki
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\055a171d10c43231a2795117ecd4c3fd\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [org.webkit:android-jsc:r245459] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\1ed26cdc1f47a6754ce1546799dd43a1\android-jsc-r245459\AndroidManifest.xml:7:5-9:41
 MERGED from [org.webkit:android-jsc:r245459] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\1ed26cdc1f47a6754ce1546799dd43a1\android-jsc-r245459\AndroidManifest.xml:7:5-9:41
+MERGED from [com.yqritc:android-scalablevideoview:1.0.4] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\ab73cc61e0ae26a077a2b66c4c69d4aa\jetified-android-scalablevideoview-1.0.4\AndroidManifest.xml:8:5-10:41
+MERGED from [com.yqritc:android-scalablevideoview:1.0.4] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\ab73cc61e0ae26a077a2b66c4c69d4aa\jetified-android-scalablevideoview-1.0.4\AndroidManifest.xml:8:5-10:41
 MERGED from [com.facebook.fresco:flipper:2.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\c180792e3f393fe4453d9c695595b3ef\flipper-2.0.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:flipper:2.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\c180792e3f393fe4453d9c695595b3ef\flipper-2.0.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:stetho:2.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\14649b8b71802f359f24d4f29dd55d6b\stetho-2.0.0\AndroidManifest.xml:5:5-7:41
@@ -288,10 +311,6 @@ MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] C:\Users\ankita\.grad
 MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\8b504391aa72c1fccbfde5f9aecf364d\imagepipeline-base-2.0.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.soloader:soloader:0.8.2] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\a682a4f61b53a5eb0b34ff17728f4b20\soloader-0.8.2\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.soloader:soloader:0.8.2] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\a682a4f61b53a5eb0b34ff17728f4b20\soloader-0.8.2\AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.android.material:material:1.1.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\7b4521e09033db39989053c4a0984cc2\material-1.1.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.material:material:1.1.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\7b4521e09033db39989053c4a0984cc2\material-1.1.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\2b7e6ebaa515cd43f42fb356f0d1941c\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\2b7e6ebaa515cd43f42fb356f0d1941c\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\3eb43dcc83336306d77ef63b3402a327\appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\3eb43dcc83336306d77ef63b3402a327\appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\edab9a506dbd8c78a6f1a18fc4eb209e\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41

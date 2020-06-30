@@ -1,24 +1,25 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, Image, ScrollView, View } from 'react-native';
-import { Button, Card, Title ,Appbar} from 'react-native-paper'
+import { Button, Card, Title, Appbar } from 'react-native-paper'
 import { TouchableOpacity } from 'react-native-gesture-handler';
-
-
+import LottieView from 'lottie-react-native';
+import AsyncStorage from '@react-native-community/async-storage'
 
 function Healthcheck(props) {
-  const [DryCough, setDryCough] = useState("")
-  const [tiredness, setTiredness] = useState("")
-  const [fever, setfever] = useState("")
-  const [sorethroat, setsorethroat] = useState("")
-  const [diarrhoea, setDiarrhoea] = useState("")
-
-  const submitDetails = () => {
+  const [DryCough, setDryCough] = useState(null)
+  const [tiredness, setTiredness] = useState(null)
+  const [fever, setfever] = useState(null)
+  const [sorethroat, setsorethroat] = useState(null)
+  const [diarrhoea, setDiarrhoea] = useState(null)
+  const submitDetails =async () => {
     console.log(DryCough, tiredness, fever, sorethroat, diarrhoea)
+    const token = await AsyncStorage.getItem('token');
+    // console.log(token)
     fetch('http://192.168.43.103:5000/healthdetails', {
       method: 'post',
       headers: {
         'Content-Type': 'application/json',
-        // "Authorization": "Bearer " + localStorage.getItem("jwt")
+        "Authorization": "Bearer " + token
       },
       body: JSON.stringify({
         DryCough,
@@ -31,6 +32,7 @@ function Healthcheck(props) {
       .then(res => res.json())
       .then(result => {
         console.log(result)
+        props.navigation.navigate('WELCOME')
       }).catch(err => {
         console.log(err)
       })
@@ -38,20 +40,22 @@ function Healthcheck(props) {
 
   return (
     <ScrollView>
-      <Appbar.Header>
+      {/* <Appbar.Header>
         <Appbar.Content
         style={styles.Header}
           title="Health Check"
         />
-      </Appbar.Header>
-      <Card style={styles.container}>
+      </Appbar.Header> */}
+      {/* <Card style={styles.container}>
         <Card.Content >
         <Image
         style={styles.logo}
         source={require('../assets/car2.png')}
-      />
-        </Card.Content>
-      </Card>
+      /> */}
+      {/* </Card.Content>
+      </Card> */}
+      <LottieView style={styles.logo} source={require('../car.json')} autoPlay loop />
+      <Text style={styles.fonts}>Let's Take a Health Check</Text>
       <Card style={styles.cards}>
         <Card.Content>
           <Title>Did You notice any symptoms of Dry Cough?</Title>
@@ -99,7 +103,9 @@ function Healthcheck(props) {
       </Card>
       <Card style={styles.container}>
         <Card.Actions>
-        <Button style={styles.buttons} onPress={() => props.navigation.navigate('SignIn')}>Submit</Button>
+          <Button style={styles.buttons} onPress={() => props.navigation.navigate('WELCOME')
+           // submitDetails()
+            }>Submit</Button>
         </Card.Actions>
       </Card>
     </ScrollView>
@@ -125,22 +131,27 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   fonts: {
-    fontSize: 18,
+    fontSize: 24,
+    marginLeft: 50,
+    marginTop: 20
   },
   logo: {
     width: 90,
     height: 90,
+    marginTop: 20
   },
   cards: {
     width: 400,
     height: 175,
     borderRadius: 4,
     borderWidth: 0.5,
-    borderColor: '#78909C',
-    flexDirection: 'row'
+    borderColor: '#f0ebeb',
+    flexDirection: 'row',
+    elevation: 0,
+    backgroundColor: '#faf5f5'
   },
-  Header:{
-    alignItems:"center"
+  Header: {
+    alignItems: "center"
   }
 });
 

@@ -5,7 +5,7 @@ const User = mongoose.model('user')
 module.exports = (req, res, next) => {
     const { authorization } = req.headers
     if (!authorization) {
-        return res.status(401).json({ message: 'you have to logged in' })
+        return res.status(401).json({ error: 'you have to logged in' })
     }
     const token = authorization.replace("Bearer ", "")
     jwt.verify(token, JWT_TOKEN, (err, payload) => {

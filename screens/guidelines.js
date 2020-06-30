@@ -1,74 +1,65 @@
-import  React from 'react'
-import {ScrollView,StyleSheet,Image}  from 'react-native'
-import {Card, Title, Paragraph,Appbar } from 'react-native-paper';
-
+import React from 'react'
+import { ScrollView, StyleSheet, SafeAreaView, Linking } from 'react-native'
+import { Card, Title, Paragraph, Appbar } from 'react-native-paper';
+import Video from 'react-native-video';
 
 const Guidelines = (props) => (
-  
-    <ScrollView style={styles.container}>
-       <Appbar.Header>
-       <Appbar.BackAction
-          onPress={props.navigation.goBack}
-        />
-        <Appbar.Content
-        style={styles.Header}
-          title="Guidelines"
-        />
-      </Appbar.Header>
-    <Card>
-      <Card.Content style = {styles.heading}>
-        <Title>Stay Home Stay Safe</Title>
-        <Paragraph>Your Life Matters So to Stay Safe Follow these Guidelines</Paragraph>
+
+  <ScrollView style={styles.container}>
+    <Appbar.Header>
+       <Appbar.Action
+       icon="dots-vertical"
+        onPress={props.navigation.goBack}
+      /> 
+       {/* <Appbar.Action
+        icon="dots-vertical" onPress={() => {props.navigation.openDrawer()}} /> */}
+      <Appbar.Content
+        title="Guidelines"
+      />
+    </Appbar.Header>
+    <Card style={{ marginTop: 20 }} onPress={() => Linking.openURL('https://www.who.int/emergencies/diseases/novel-coronavirus-2019')}>
+      <Card.Content style={styles.heading, { marginTop: 10 }, { backgroundColor: '#aeddf5' }}>
+        <Title style={styles.font}>Stay Home Stay Safe</Title>
+        <Paragraph style={styles.font}>At the end of the day,the goals are simple:safety and security</Paragraph>
+        <Paragraph style={styles.font}>For more Information about COVID-19 CLICK HERE</Paragraph>
       </Card.Content>
     </Card>
-    <Card style={styles.cards}>
-    <Card.Cover source={require('../assets/11.jpg')} />
-  </Card>
-  <Card style={styles.cards}>
-    <Card.Cover source={ require('../assets/12.jpeg')} />
-  </Card>
-  <Card style={styles.cards}>
-    <Card.Cover source={require('../assets/13.jpeg')} />
-  </Card>
-  <Card style={styles.cards}>
-    <Card.Cover source={require('../assets/14.jpeg')} />
-  </Card>
-  <Card style={styles.cards}>
-    <Card.Cover source={require('../assets/15.jpeg')} />
-  </Card>
-  <Card style={styles.cards}>
-    <Card.Cover source={require('../assets/16.jpeg')} />
-  </Card>
-    </ScrollView>
-  );
-  
-  export default Guidelines;
+    <SafeAreaView style={styles.Video}>
+      <Video source={require('../symp.mp4')}
+        repeat={true} muted={true}
+        style={styles.backgroundVideo} />
+    </SafeAreaView>
+    <SafeAreaView style={styles.Video}>
+      <Video source={require('../synp1.mp4')}
+        repeat={true} muted={true}
+        style={styles.backgroundVideo} />
+    </SafeAreaView>
+  </ScrollView>
+);
 
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#e0e0e0',
-    },
-    heading:{
-        // margin: 10,
-        padding: 8,
-        height:100,
-        // backgroundColor:'#3443eb',
-        color: 'black',
-        fontSize: 18,
-        fontWeight: '500',
-        alignContent:"center",
-        fontFamily:'Bitstream Cyberbit'
-    },
-    cards:{
-      width:350,
-      height:200,
-      borderRadius: 4,
-      borderWidth: 0.5,
-      borderColor: '#78909C',
-      flexDirection: 'row'
-    },
-    Header:{
-      alignItems:"center"
-    }
-  });
+export default Guidelines;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#ffffff',
+  },
+  backgroundVideo: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+  },
+  Video: {
+    height: 350,
+    width:100,
+    marginBottom: 10
+  },
+  font: {
+    fontSize: 18,
+    fontStyle: 'italic',
+    alignItems: 'center',
+    marginLeft: 30
+  }
+});

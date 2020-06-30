@@ -473,6 +473,20 @@ attr listPreferredItemPaddingStart
 attr liteMode
 attr logo
 attr logoDescription
+attr lottie_autoPlay
+attr lottie_colorFilter
+attr lottie_enableMergePathsForKitKatAndAbove
+attr lottie_fileName
+attr lottie_imageAssetsFolder
+attr lottie_loop
+attr lottie_progress
+attr lottie_rawRes
+attr lottie_renderMode
+attr lottie_repeatCount
+attr lottie_repeatMode
+attr lottie_scale
+attr lottie_speed
+attr lottie_url
 attr mapType
 attr materialAlertDialogBodyTextStyle
 attr materialAlertDialogTheme
@@ -562,6 +576,7 @@ attr roundedCornerRadius
 attr roundingBorderColor
 attr roundingBorderPadding
 attr roundingBorderWidth
+attr scalableType
 attr scopeUris
 attr scrimAnimationDuration
 attr scrimBackground
@@ -1518,6 +1533,7 @@ id always
 id amu_text
 id async
 id auto
+id automatic
 id back
 id beginning
 id blocking
@@ -1527,8 +1543,12 @@ id cancel_action
 id cancel_button
 id catalyst_redbox_title
 id center
+id centerBottom
+id centerBottomCrop
 id centerCrop
 id centerInside
+id centerTop
+id centerTopCrop
 id center_horizontal
 id center_vertical
 id checkbox
@@ -1562,6 +1582,7 @@ id disableHome
 id dropdown_menu
 id edit_query
 id end
+id endInside
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
@@ -1590,6 +1611,7 @@ id front
 id ghost_view
 id ghost_view_holder
 id group_divider
+id hardware
 id hideable
 id home
 id homeAsUp
@@ -1605,11 +1627,18 @@ id item_touch_helper_previous_elevation
 id labeled
 id largeLabel
 id left
+id leftBottom
+id leftBottomCrop
+id leftCenter
+id leftCenterCrop
+id leftTop
+id leftTopCrop
 id light
 id line1
 id line3
 id listMode
 id list_item
+id lottie_layer_name
 id masked
 id media_actions
 id message
@@ -1664,7 +1693,15 @@ id progress_horizontal
 id radio
 id react_test_id
 id redEye
+id restart
+id reverse
 id right
+id rightBottom
+id rightBottomCrop
+id rightCenter
+id rightCenterCrop
+id rightTop
+id rightTopCrop
 id right_icon
 id right_side
 id rn_frame_file
@@ -1710,6 +1747,7 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
+id software
 id spacer
 id split_action_bar
 id src_atop
@@ -1717,6 +1755,7 @@ id src_in
 id src_over
 id standard
 id start
+id startInside
 id status_bar_latest_event_content
 id stretch
 id submenuarrow
@@ -2854,6 +2893,7 @@ styleable LinearLayoutCompat android_gravity android_orientation android_baselin
 styleable LinearLayoutCompat_Layout android_layout_gravity android_layout_width android_layout_height android_layout_weight
 styleable ListPopupWindow android_dropDownHorizontalOffset android_dropDownVerticalOffset
 styleable LoadingImageView circleCrop imageAspectRatio imageAspectRatioAdjust
+styleable LottieAnimationView lottie_autoPlay lottie_colorFilter lottie_enableMergePathsForKitKatAndAbove lottie_fileName lottie_imageAssetsFolder lottie_loop lottie_progress lottie_rawRes lottie_renderMode lottie_repeatCount lottie_repeatMode lottie_scale lottie_speed lottie_url
 styleable MapAttrs ambientEnabled cameraBearing cameraMaxZoomPreference cameraMinZoomPreference cameraTargetLat cameraTargetLng cameraTilt cameraZoom latLngBoundsNorthEastLatitude latLngBoundsNorthEastLongitude latLngBoundsSouthWestLatitude latLngBoundsSouthWestLongitude liteMode mapType uiCompass uiMapToolbar uiRotateGestures uiScrollGestures uiScrollGesturesDuringRotateOrZoom uiTiltGestures uiZoomControls uiZoomGestures useViewLifecycle zOrderOnTop
 styleable MaterialAlertDialog backgroundInsetBottom backgroundInsetEnd backgroundInsetStart backgroundInsetTop
 styleable MaterialAlertDialogTheme materialAlertDialogBodyTextStyle materialAlertDialogTheme materialAlertDialogTitleIconStyle materialAlertDialogTitlePanelStyle materialAlertDialogTitleTextStyle
@@ -2898,6 +2938,7 @@ styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
+styleable scaleStyle scalableType
 xml file_provider_paths
 xml rn_dev_preferences
 xml standalone_badge

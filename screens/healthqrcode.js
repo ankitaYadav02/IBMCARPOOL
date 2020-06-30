@@ -3,7 +3,7 @@
 import React, { useState,useEffect } from 'react'
 import QRCode from 'react-native-qrcode-generator';
 import {Appbar} from 'react-native-paper'
-
+import AsyncStorage from '@react-native-community/async-storage'
 import {
     AppRegistry,
     StyleSheet,
@@ -11,18 +11,37 @@ import {
     TextInput
 } from 'react-native';
 
-
-
-function HelloWorld(props) {
+ const HelloWorld =(props)=> {
+ //var count=0;
   const[details,setDetails]=useState([])
-  useEffect(() => {
-   fetch('http://192.168.43.103:5000/health').
-   then(res => res.json())
-       .then(result => {
-           console.log(result)
-           setDetails(result)
-       })
- }, [])
+  useEffect(()=>{
+    async function fetch(){
+      const token = await AsyncStorage.getItem('token');
+      console.log(token)
+       fetch('http://192.168.43.103:5000/health',{
+         headers:{
+           Authorization:'Bearer '+token
+         }
+       }).
+       then(res => res.json())
+           .then(result => {
+               console.log(result)
+              //  result.map(item=>{
+              //   if(item==true){
+              //     count=count+1
+              //   }
+              // })
+              setDetails(result)
+           })
+    }  
+   },[])
+
+  
+// count==1?setDetails('you are at moderate risk')
+// :count==2?setDetails('you are at risk and needs checkup')
+// :count==3?setDetails('you are at high risk')
+// :setDetails("you should isolate yourself")
+
     return (
       <View >
          <Appbar.Header>
@@ -34,12 +53,14 @@ function HelloWorld(props) {
           title="Health QR Code"
         />
       </Appbar.Header>
-        <QRCode
-        style={styles.container}
+      <View style={styles.container}>
+      <QRCode
           value={details}
           size={200}
           bgColor='black'
           fgColor='white'/>
+      </View>
+       
       </View>
     );
   };
@@ -50,18 +71,16 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: 'white',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginTop:150,
+        marginRight:200,
+        marginLeft:170
     },
-    code:{
-     alignContent:'center',
-     justifyContent: 'center',
-     marginTop:100,
-    marginLeft:100
-    },Header:{
+    Header:{
       alignItems:"center"
     }
 });
 
-AppRegistry.registerComponent('HelloWorld', () => HelloWorld);
+//AppRegistry.registerComponent('HelloWorld', () => HelloWorld);
 
 module.exports = HelloWorld;

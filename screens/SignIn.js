@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, Image, View, TextInput } from 'react-native';
 import { Button, Appbar } from 'react-native-paper'
 import { TouchableOpacity } from 'react-native-gesture-handler';
-
-
+import AsyncStorage from '@react-native-community/async-storage'
+import LottieView from 'lottie-react-native';
 function SignIn(props) {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-
+ 
   const submitDetails = () => {
     console.log(email, password)
     fetch('http://192.168.43.103:5000/signin', {
@@ -21,8 +21,19 @@ function SignIn(props) {
       })
     })
       .then(res => res.json())
-      .then(result => {
+      .then(async(result) => {
+        if(result.error){
+          console.log(result.error)
+        }
         console.log(result)
+        try {
+          await AsyncStorage.setItem('token', result);
+          //props.navigation.replace('Check')
+          props.navigation.navigate('WELCOME')
+        } catch (error) {
+          console.log(error.message);
+        }
+       
       }).catch(err => {
         console.log(err)
       })
@@ -30,18 +41,16 @@ function SignIn(props) {
 
   return (
     <View >
-      <Appbar.Header>
+      {/* <Appbar.Header>
         <Appbar.Content
         style={styles.Header}
           title="Sign In"
         />
-      </Appbar.Header>
+      </Appbar.Header> */}
       < View>
-        <Image
-          style={styles.logo}
-          source={require('../assets/car2.png')}
-        />
-        <TextInput
+      <LottieView style={styles.logo} source={require('../car.json')} autoPlay loop />
+      <View   style={{marginTop:70}}>
+      <TextInput
           label='email'
           value={email}
           style={styles.input}
@@ -61,14 +70,16 @@ function SignIn(props) {
           onChangeText={(text) => setPassword(text)}
         />
         <Button style={styles.buttons} onPress={() => {
-          submitDetails()
-          props.navigation.navigate('WELCOME')
+         submitDetails()  
+         //props.navigation.navigate('WELCOME')
         }}>Sign In</Button>
         <Button style={styles.buttons} onPress={() => console.log('pressed')}>Forgot Password</Button>
         <TouchableOpacity>
           <Text style={styles.fonts} onPress={() => props.navigation.navigate('Signup')}>Don't Have An Account?</Text>
 
         </TouchableOpacity>
+      </View>
+      
 
       </View>
 
@@ -116,8 +127,7 @@ const styles = StyleSheet.create({
   logo: {
     width: 90,
     height: 90,
-    marginTop:20,
-    marginLeft:130
+    marginTop:20
   },
   Header:{
     alignItems:"center"

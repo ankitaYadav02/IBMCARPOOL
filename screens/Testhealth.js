@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import { StyleSheet, Text,Image ,ScrollView } from 'react-native';
 import {Button} from 'react-native-paper'
 import { TouchableOpacity } from 'react-native-gesture-handler';
-
+import AsyncStorage from '@react-native-community/async-storage'
 
 function Testhealth (props) {
   const[DryCough,setDryCough]=useState("")
@@ -13,11 +13,13 @@ function Testhealth (props) {
 
  const submitDetails=()=>{
    console.log(DryCough,tiredness,fever,sorethroat,diarrhoea)
+   const token = await AsyncStorage.getItem('token');
+   console.log(token)
     fetch('http://192.168.43.103:5000/updatehealth',{
         method:'put',
         headers:{
             'Content-Type':'application/json',
-            "Authorization": "Bearer " + localStorage.getItem("jwt")
+            "Authorization": "Bearer " +token
         },
         body:JSON.stringify({
             DryCough,

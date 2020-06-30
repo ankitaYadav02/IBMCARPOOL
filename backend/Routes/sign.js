@@ -13,7 +13,7 @@ router.post('/signup',(req,res)=>{
     const {name,email,ContactNo,password} = req.body
     //console.log(name,email,contactNo,password,cough,cold,fever)
     if(!name||!email||!ContactNo||!password){
-        return res.status(422).json({ message: "please fill all details" })
+        return res.status(422).json({ error: "please fill all details" })
     }
     user.findOne({ email: email }).then((saveduser) => {
         if (saveduser) {
@@ -29,7 +29,7 @@ router.post('/signup',(req,res)=>{
                 })
                 User.save()
                     .then(User => {
-                        res.json({ message: "data saved" })
+                        res.json(User)
                     })
                     .catch(err => {
                         console.log(err)
@@ -46,12 +46,12 @@ router.post('/signup',(req,res)=>{
 router.post('/signin',(req,res)=>{
     const{email,password} = req.body
     if(!email||!password){
-        res.status(422).json({message:'please fill all details'})
+        res.status(422).json({error:'please fill all details'})
     }
     user.findOne({email,email})
     .then(saveduser=>{
         if(!saveduser){
-            res.status(422).json({message:'invalid email or password'})  
+            res.status(422).json({error:'invalid email or password'})  
         }
         bcrypt.compare(password,saveduser.password)
         .then(domatch=>{
@@ -63,7 +63,7 @@ router.post('/signin',(req,res)=>{
                 // const {_id,name,email,ContactNo} = saveduser
                 // res.json({token,user:{_id,name,email,ContactNo}})
             }else{
-                res.status(422).json({message:'invalid email or password'})     
+                res.status(422).json({error:'invalid email or password'})     
             }
         })
         .catch(error=>{
@@ -71,5 +71,19 @@ router.post('/signin',(req,res)=>{
         })
     })
 })
-    
+ 
+router.get('/getuser',requireLogin,(req,res)=>{
+    console.log(req.user.name)
+    user.findOne({name:req.user.name})
+    .populate('user.name')
+    .exec((err,User)=>{
+        if(err){
+            //res.status(422).json(err)
+            console.log(err)
+        }
+        console.log({User})
+        res.status(200).json(User)
+    })
+})
+
 module.exports = router;
