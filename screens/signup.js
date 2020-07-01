@@ -64,7 +64,6 @@ import LottieView from 'lottie-react-native';
           onChangeText = {(text)=>setContactNo(text)}
         />
         <Button style={styles.buttons} onPress={() =>{SubmitDetails()
-        props.navigation.navigate('Check')
         }}>Sign Up</Button>
         <TouchableOpacity>
         <Text style={styles.fonts}onPress={() =>props.navigation.navigate('SignIn')}>Have An Account?</Text>

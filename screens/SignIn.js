@@ -28,8 +28,9 @@ function SignIn(props) {
         console.log(result)
         try {
           await AsyncStorage.setItem('token', result);
-          //props.navigation.replace('Check')
-          props.navigation.navigate('WELCOME')
+          props.navigation.replace('Check')
+          //props.navigation.navigate('WELCOME')
+         // props.navigation.navigate('Pay')
         } catch (error) {
           console.log(error.message);
         }

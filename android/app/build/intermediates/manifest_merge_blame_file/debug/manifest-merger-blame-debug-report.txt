@@ -111,52 +111,51 @@
 59-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:27:17-81
 60
 61        <meta-data
-61-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:29:3-31:63
+61-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:29:3-31:24
 62            android:name="com.google.android.geo.API_KEY"
 62-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:30:6-51
-63            android:value="AIzaSyAncda-Xu1VnN_T9p7CJJ9HogBCWTFElGU" />
-63-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:31:6-61
-64
-65        <uses-library
-65-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:33:9-87
-66            android:name="org.apache.http.legacy"
-66-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:33:23-60
-67            android:required="false" />
-67-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:33:61-85
-68
-69        <provider
-69-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-20:20
-70            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
-70-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-83
-71            android:authorities="com.carpool.fileprovider"
-71-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-64
-72            android:exported="false"
-72-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-37
-73            android:grantUriPermissions="true" >
-73-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-47
-74            <meta-data
-74-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-19:63
-75                android:name="android.support.FILE_PROVIDER_PATHS"
-75-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:17-67
-76                android:resource="@xml/file_provider_paths" />
-76-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:17-60
-77        </provider>
-78
-79        <activity
-79-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\6d45d9e0505112f0eec54f8796757f91\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
-80            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-80-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\6d45d9e0505112f0eec54f8796757f91\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
-81            android:exported="false"
-81-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\6d45d9e0505112f0eec54f8796757f91\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
-82            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-82-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\6d45d9e0505112f0eec54f8796757f91\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
-83
-84        <meta-data
-84-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\f02e80614a2586b8a104b6adc624441e\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
-85            android:name="com.google.android.gms.version"
-85-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\f02e80614a2586b8a104b6adc624441e\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
-86            android:value="@integer/google_play_services_version" />
-86-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\f02e80614a2586b8a104b6adc624441e\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
-87    </application>
-88
-89</manifest>
+63            android:value="" /> <!-- AIzaSyAncda-Xu1VnN_T9p7CJJ9HogBCWTFElGU -->
+63-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:31:6-22
+64        <uses-library
+64-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:33:9-87
+65            android:name="org.apache.http.legacy"
+65-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:33:23-60
+66            android:required="false" />
+66-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:33:61-85
+67
+68        <provider
+68-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-20:20
+69            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
+69-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-83
+70            android:authorities="com.carpool.fileprovider"
+70-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-64
+71            android:exported="false"
+71-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-37
+72            android:grantUriPermissions="true" >
+72-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-47
+73            <meta-data
+73-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-19:63
+74                android:name="android.support.FILE_PROVIDER_PATHS"
+74-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:17-67
+75                android:resource="@xml/file_provider_paths" />
+75-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:17-60
+76        </provider>
+77
+78        <activity
+78-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\6d45d9e0505112f0eec54f8796757f91\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+79            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+79-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\6d45d9e0505112f0eec54f8796757f91\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+80            android:exported="false"
+80-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\6d45d9e0505112f0eec54f8796757f91\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+81            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+81-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\6d45d9e0505112f0eec54f8796757f91\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+82
+83        <meta-data
+83-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\f02e80614a2586b8a104b6adc624441e\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+84            android:name="com.google.android.gms.version"
+84-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\f02e80614a2586b8a104b6adc624441e\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+85            android:value="@integer/google_play_services_version" />
+85-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\f02e80614a2586b8a104b6adc624441e\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+86    </application>
+87
+88</manifest>

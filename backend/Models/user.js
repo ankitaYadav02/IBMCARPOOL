@@ -18,6 +18,9 @@ const userSchema = new mongoose.Schema({
     ContactNo:{
         type:Number,
         require:true
+    },
+    stripe_customerId: {
+        type:String
     }
 
 })

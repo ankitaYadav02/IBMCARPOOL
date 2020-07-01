@@ -220,9 +220,9 @@ ADDED from C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\Androi
 	android:name
 		ADDED from C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:27:17-81
 meta-data#com.google.android.geo.API_KEY
-ADDED from C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:29:3-31:63
+ADDED from C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:29:3-31:24
 	android:value
-		ADDED from C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:31:6-61
+		ADDED from C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:31:6-22
 	android:name
 		ADDED from C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:30:6-51
 uses-library#org.apache.http.legacy

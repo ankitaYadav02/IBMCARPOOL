@@ -15,7 +15,8 @@ import QRCODE from './screens/healthqrcode'
 import Parking from './screens/parking'
 import Healthscanner from './screens/scanner'
 import {DrawerContent} from './screens/drawerContent'
-import Pay from './screens/pay'
+import Payment from './screens/payment'
+import Recipt from './screens/pay'
 import AsyncStorage from '@react-native-community/async-storage'
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -67,12 +68,14 @@ function App() {
           <Stack.Screen name="SignIn" component={SignIn} />
           </>)
         } */}
-        <Stack.Screen name="Pay" component={Pay} />
+        
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="SignIn" component={SignIn} />
         <Stack.Screen name="Check" component={Healthcheck} />
         <Stack.Screen name="WELCOME" component={Dashboard} />
+        <Stack.Screen name="Pay" component={Payment} />
+        <Stack.Screen name="Recipt" component={Recipt} />
       </Stack.Navigator>
     </View>
   );
