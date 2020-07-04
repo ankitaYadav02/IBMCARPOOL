@@ -15,7 +15,7 @@ function Testhealth (props) {
    console.log(DryCough,tiredness,fever,sorethroat,diarrhoea)
    const token = await AsyncStorage.getItem('token');
    console.log(token)
-    fetch('http://192.168.43.103:5000/updatehealth',{
+    fetch('http://192.168.43.27:5000/updatehealth',{
         method:'put',
         headers:{
             'Content-Type':'application/json',
@@ -90,7 +90,7 @@ function Testhealth (props) {
       </Card>
       <Card style={styles.container}>
         <CardActions>
-        <Button style={styles.buttons} onPress={() => props.navigation.navigate('WELCOME')}>Submit</Button>
+        <Button style={styles.buttons} onPress={() => props.navigation.navigate('Welcome')}>Submit</Button>
         </CardActions>
       </Card>
       

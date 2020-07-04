@@ -83,6 +83,9 @@ project.ext.react = [
 
 apply from: "../../node_modules/react-native/react.gradle"
 
+
+
+
 /**
  * Set this to true to create two separate APKs instead of one:
  *   - An APK that only works on ARM devices
@@ -193,9 +196,7 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
-    // implementation project(':react-native-maps')  
- //   implementation 'com.facebook.fresco:fresco:2.2.0'
- //implementation 'com.facebook.fresco:animated-gif:2.2.0'
+
  implementation project(':lottie-react-native')
   compile project(':react-native-video')
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
@@ -238,3 +239,13 @@ task copyDownloadableDepsToLibs(type: Copy) {
 }
 
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
+
+
+dependencies {
+  compile 'com.android.support:multidex:1.0.1' //enter the latest version
+}
+android {
+    defaultConfig {
+        multiDexEnabled true
+    }
+}
