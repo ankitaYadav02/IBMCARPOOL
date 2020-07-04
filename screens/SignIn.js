@@ -4,6 +4,8 @@ import { Button, Appbar } from 'react-native-paper'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import AsyncStorage from '@react-native-community/async-storage'
 import LottieView from 'lottie-react-native';
+import Toast from 'react-native-toast-message'
+
 function SignIn(props) {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -24,19 +26,38 @@ function SignIn(props) {
       .then(async(result) => {
         if(result.error){
           console.log(result.error)
+          Toast.show({
+            type:'error',
+            text1: 'Error',
+            text2: 'Oops!Something went wrong...'
+          })
         }
         console.log(result)
         try {
           await AsyncStorage.setItem('token', result);
+          Toast.show({
+            text1: 'Hurray',
+            text2: 'You Signed In Successfully 👋'
+          })
           props.navigation.replace('Check')
           //props.navigation.navigate('WELCOME')
          // props.navigation.navigate('Pay')
         } catch (error) {
           console.log(error.message);
+          Toast.show({
+            type:'error',
+            text1: 'Error',
+            text2: 'Oops!Something went wrong...'
+          })
         }
        
       }).catch(err => {
         console.log(err)
+        Toast.show({
+          type:'error',
+          text1: 'Error',
+          text2: 'Oops!Something went wrong...'
+        })
       })
   }
 
@@ -74,7 +95,7 @@ function SignIn(props) {
          submitDetails()  
          //props.navigation.navigate('WELCOME')
         }}>Sign In</Button>
-        <Button style={styles.buttons} onPress={() => console.log('pressed')}>Forgot Password</Button>
+        <Button style={styles.buttons} onPress={() => props.navigation.navigate('Forgot Password')}>Forgot Password</Button>
         <TouchableOpacity>
           <Text style={styles.fonts} onPress={() => props.navigation.navigate('Signup')}>Don't Have An Account?</Text>
 

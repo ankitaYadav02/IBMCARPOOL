@@ -3,8 +3,8 @@ import {ScrollView ,StyleSheet,TextInput,View ,Image } from 'react-native';
 import Stripe from 'react-native-stripe-api'
 import { Button } from 'react-native-paper'
 import AsyncStorage from '@react-native-community/async-storage'
+import Toast from 'react-native-toast-message'
 const payment = (props)=>{
-
 
 const[card,setCard]=useState('')
 const[expyear,setExpyear]=useState('')
@@ -77,12 +77,27 @@ const dopayment = async () =>{
     ).then ((res) => res.json())
     .then((result) => {
      console.log(result)
+     Toast.show({
+      text1: 'WOW',
+      text2: 'You Paid Successfully 👋'
+    })
       props.navigation.navigate('Recipt')
     })
-    .catch(err=> console.log(err))
+    .catch(err=> {console.log(err)
+      Toast.show({
+        type:'error',
+        text1: 'Error',
+        text2: 'Oops!Something went wrong...'
+      })
+    })
   } catch(err) {
     console.log(err);
     console.error(err);
+    Toast.show({
+      type:'error',
+      text1: 'Error',
+      text2: 'Oops!Something went wrong...'
+    })
   }
   
 }

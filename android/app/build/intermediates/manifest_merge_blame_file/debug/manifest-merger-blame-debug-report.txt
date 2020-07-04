@@ -17,30 +17,34 @@
 13    <uses-permission android:name="android.permission.VIBRATE" />
 13-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:5:6-66
 13-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:5:23-64
-14    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-14-->[com.facebook.flipper:flipper:0.33.1] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\4c104f7cdfc8133d2b4d9daa25f5c04c\jetified-flipper-0.33.1\AndroidManifest.xml:16:5-76
-14-->[com.facebook.flipper:flipper:0.33.1] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\4c104f7cdfc8133d2b4d9daa25f5c04c\jetified-flipper-0.33.1\AndroidManifest.xml:16:22-73
-15    <uses-permission android:name="android.permission.BLUETOOTH" />
-15-->[:react-native-ble-manager] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-ble-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-68
-15-->[:react-native-ble-manager] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-ble-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-65
-16    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-16-->[:react-native-ble-manager] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-ble-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-74
-16-->[:react-native-ble-manager] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-ble-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-71
-17    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-17-->[:react-native-ble-manager] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-ble-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-81
-17-->[:react-native-ble-manager] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-ble-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:22-78
-18
-19    <uses-feature
-19-->[:react-native-ble-manager] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-ble-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-13:36
-20        android:name="android.hardware.bluetooth_le"
-20-->[:react-native-ble-manager] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-ble-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-53
-21        android:required="false" />
-21-->[:react-native-ble-manager] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-ble-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:9-33
-22
-23    <uses-permission android:name="android.permission.CAMERA" />
-23-->[:react-native-camera] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-camera\android\build\intermediates\library_manifest\generalDebug\AndroidManifest.xml:9:5-65
-23-->[:react-native-camera] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-camera\android\build\intermediates\library_manifest\generalDebug\AndroidManifest.xml:9:22-62
-24
+14    <uses-permission android:name="android.permission.CAMERA" />
+14-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:6:6-66
+14-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:6:23-63
+15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+15-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:7:1-77
+15-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:7:18-74
+16    <uses-permission android:name="android.permission.BLUETOOTH" />
+16-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:8:7-69
+16-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:8:24-67
+17    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+17-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:9:5-73
+17-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:9:22-71
+18    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+18-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:10:5-81
+18-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:10:22-78
+19    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+19-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:11:6-80
+19-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:11:23-77
+20    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+20-->[com.facebook.flipper:flipper:0.33.1] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\4c104f7cdfc8133d2b4d9daa25f5c04c\jetified-flipper-0.33.1\AndroidManifest.xml:16:5-76
+20-->[com.facebook.flipper:flipper:0.33.1] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\4c104f7cdfc8133d2b4d9daa25f5c04c\jetified-flipper-0.33.1\AndroidManifest.xml:16:22-73
+21
+22    <uses-feature
+22-->[:react-native-ble-manager] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-ble-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-13:36
+23        android:name="android.hardware.bluetooth_le"
+23-->[:react-native-ble-manager] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-ble-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-53
+24        android:required="false" />
+24-->[:react-native-ble-manager] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-ble-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:9-33
 25    <uses-feature
 25-->[:react-native-camera] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-camera\android\build\intermediates\library_manifest\generalDebug\AndroidManifest.xml:11:5-13:36
 26        android:name="android.hardware.camera"
@@ -65,97 +69,114 @@
 35-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\dcb0caa0b7590c92c93c5bf3cc09a745\play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
 36
 37    <application
-37-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:9:5-36:19
+37-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:12:5-39:19
 38        android:name="com.carpool.MainApplication"
-38-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:10:7-38
+38-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:13:7-38
 39        android:allowBackup="false"
-39-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:14:7-34
+39-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:17:7-34
 40        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 40-->[androidx.core:core:1.1.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\4f509a65121478d6153615d7ef5b7c5f\core-1.1.0\AndroidManifest.xml:24:18-86
 41        android:debuggable="true"
 42        android:icon="@mipmap/ic_launcher"
-42-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:12:7-41
+42-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:15:7-41
 43        android:label="@string/app_name"
-43-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:11:7-39
+43-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:14:7-39
 44        android:roundIcon="@mipmap/ic_launcher_round"
-44-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:13:7-52
+44-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:16:7-52
 45        android:theme="@style/AppTheme"
-45-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:15:7-38
+45-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:18:7-38
 46        android:usesCleartextTraffic="true" >
 46-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\debug\AndroidManifest.xml:7:18-53
 47        <activity
-47-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:16:7-26:18
+47-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:19:7-29:18
 48            android:name="com.carpool.MainActivity"
-48-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:17:9-37
+48-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:20:9-37
 49            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-49-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:19:9-86
+49-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:22:9-86
 50            android:label="@string/app_name"
-50-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:18:9-41
+50-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:21:9-41
 51            android:launchMode="singleTask"
-51-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:20:9-40
+51-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:23:9-40
 52            android:windowSoftInputMode="adjustResize" >
-52-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:21:9-51
+52-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:24:9-51
 53            <intent-filter>
-53-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:22:9-25:25
+53-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:25:9-28:25
 54                <action android:name="android.intent.action.MAIN" />
-54-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:23:13-65
-54-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:23:21-62
+54-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:26:13-65
+54-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:26:21-62
 55
 56                <category android:name="android.intent.category.LAUNCHER" />
-56-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:24:13-73
-56-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:24:23-70
+56-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:27:13-73
+56-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:27:23-70
 57            </intent-filter>
 58        </activity>
 59        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-59-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:27:7-84
-59-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:27:17-81
+59-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:30:7-84
+59-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:30:17-81
 60
 61        <meta-data
-61-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:29:3-31:24
+61-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:32:3-34:24
 62            android:name="com.google.android.geo.API_KEY"
-62-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:30:6-51
+62-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:33:6-51
 63            android:value="" /> <!-- AIzaSyAncda-Xu1VnN_T9p7CJJ9HogBCWTFElGU -->
-63-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:31:6-22
+63-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:34:6-22
 64        <uses-library
-64-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:33:9-87
+64-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:36:9-87
 65            android:name="org.apache.http.legacy"
-65-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:33:23-60
+65-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:36:23-60
 66            android:required="false" />
-66-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:33:61-85
+66-->C:\Users\ankita\Desktop\car_ppool\CarPool\android\app\src\main\AndroidManifest.xml:36:61-85
 67
 68        <provider
-68-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-20:20
-69            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
-69-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-83
-70            android:authorities="com.carpool.fileprovider"
-70-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-64
+68-->[:react-native-image-picker] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:9-18:20
+69            android:name="com.imagepicker.FileProvider"
+69-->[:react-native-image-picker] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-56
+70            android:authorities="com.carpool.provider"
+70-->[:react-native-image-picker] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-60
 71            android:exported="false"
-71-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-37
+71-->[:react-native-image-picker] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-37
 72            android:grantUriPermissions="true" >
-72-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-47
+72-->[:react-native-image-picker] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-47
 73            <meta-data
-73-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-19:63
+73-->[:react-native-image-picker] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-17:58
 74                android:name="android.support.FILE_PROVIDER_PATHS"
-74-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:17-67
-75                android:resource="@xml/file_provider_paths" />
-75-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:17-60
+74-->[:react-native-image-picker] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:17-67
+75                android:resource="@xml/provider_paths" />
+75-->[:react-native-image-picker] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-55
 76        </provider>
-77
-78        <activity
-78-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\6d45d9e0505112f0eec54f8796757f91\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
-79            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-79-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\6d45d9e0505112f0eec54f8796757f91\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+77        <provider
+77-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-20:20
+78            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
+78-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-83
+79            android:authorities="com.carpool.fileprovider"
+79-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-64
 80            android:exported="false"
-80-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\6d45d9e0505112f0eec54f8796757f91\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
-81            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-81-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\6d45d9e0505112f0eec54f8796757f91\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
-82
-83        <meta-data
-83-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\f02e80614a2586b8a104b6adc624441e\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
-84            android:name="com.google.android.gms.version"
-84-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\f02e80614a2586b8a104b6adc624441e\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
-85            android:value="@integer/google_play_services_version" />
-85-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\f02e80614a2586b8a104b6adc624441e\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
-86    </application>
-87
-88</manifest>
+80-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-37
+81            android:grantUriPermissions="true" >
+81-->[:react-native-webview] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-47
+82            <meta-data
+82-->[:react-native-image-picker] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-17:58
+83                android:name="android.support.FILE_PROVIDER_PATHS"
+83-->[:react-native-image-picker] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:17-67
+84                android:resource="@xml/file_provider_paths" />
+84-->[:react-native-image-picker] C:\Users\ankita\Desktop\car_ppool\CarPool\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-55
+85        </provider>
+86
+87        <activity
+87-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\6d45d9e0505112f0eec54f8796757f91\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+88            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+88-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\6d45d9e0505112f0eec54f8796757f91\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+89            android:exported="false"
+89-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\6d45d9e0505112f0eec54f8796757f91\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+90            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+90-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\6d45d9e0505112f0eec54f8796757f91\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+91
+92        <meta-data
+92-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\f02e80614a2586b8a104b6adc624441e\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+93            android:name="com.google.android.gms.version"
+93-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\f02e80614a2586b8a104b6adc624441e\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+94            android:value="@integer/google_play_services_version" />
+94-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\ankita\.gradle\caches\transforms-2\files-2.1\f02e80614a2586b8a104b6adc624441e\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+95    </application>
+96
+97</manifest>

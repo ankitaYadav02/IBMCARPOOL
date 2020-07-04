@@ -3,7 +3,7 @@ import { StyleSheet, Text,Image ,ScrollView, TextInput,TouchableNativeFeedback, 
 import {Button,Appbar} from 'react-native-paper'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import LottieView from 'lottie-react-native';
-
+import Toast from 'react-native-toast-message'
   function SignUp (props) {
     const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -25,9 +25,18 @@ import LottieView from 'lottie-react-native';
     }).then(res => res.json())
       .then(data => {
         console.log(data)
+        Toast.show({
+          text1: 'Hurray',
+          text2: 'You Signed Up Successfully 👋'
+        })
         props.navigation.navigate('SignIn')
       }).catch(err => {
         console.log(err)
+        Toast.show({
+          type:'error',
+          text1: 'Error',
+          text2: 'Oops!Something went wrong...'
+        })
       })
   }
   return (

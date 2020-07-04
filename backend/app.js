@@ -12,7 +12,8 @@ mongoose.connect(mongourl.MONGOURL,{ useNewUrlParser: true ,useUnifiedTopology: 
 .catch((err)=>console.log(err))
 require('./Models/user')
 require('./Models/health')
-
+require('./Models/passenger')
+require('./Models/driver')
 app.engine("ejs",engines.ejs);
 app.set("views",'./views');
 app.set("view engine","ejs")
@@ -23,5 +24,6 @@ app.use(express.json())
 app.use(require('./Routes/sign'))
 app.use(require('./Routes/healthroutes'))
 app.use(require('./Routes/stripe'))
-
+app.use(require('./Routes/searchRoute'))
+app.use(require('./Routes/addRoute'))
 app.listen(PORT,()=>console.log(`server is listen at`,PORT))

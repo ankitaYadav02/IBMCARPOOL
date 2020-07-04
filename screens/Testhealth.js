@@ -3,7 +3,7 @@ import { StyleSheet, Text,Image ,ScrollView } from 'react-native';
 import {Button} from 'react-native-paper'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import AsyncStorage from '@react-native-community/async-storage'
-
+import Toast from 'react-native-toast-message'
 function Testhealth (props) {
   const[DryCough,setDryCough]=useState("")
   const[tiredness,setTiredness]=useState("")
@@ -32,8 +32,17 @@ function Testhealth (props) {
     .then(res=>res.json())
     .then(result=>{
         console.log(result)
+        Toast.show({
+          text1: 'Hurray',
+          text2: 'You Successfully tested yourself 👋'
+        })
     }).catch(err => {
       console.log(err)
+      Toast.show({
+        type:'error',
+        text1: 'Error',
+        text2: 'Oops!Something went wrong...'
+      })
     })
 }
      

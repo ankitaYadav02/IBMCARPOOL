@@ -12,17 +12,17 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <uses-feature
         android:name="android.hardware.bluetooth_le"
         android:required="false" />
-
-    <uses-permission android:name="android.permission.CAMERA" />
-
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
@@ -66,6 +66,15 @@
             android:name="org.apache.http.legacy"
             android:required="false" />
 
+        <provider
+            android:name="com.imagepicker.FileProvider"
+            android:authorities="com.carpool.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
         <provider
             android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
             android:authorities="com.carpool.fileprovider"

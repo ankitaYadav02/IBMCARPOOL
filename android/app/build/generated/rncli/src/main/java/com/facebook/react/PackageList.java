@@ -23,6 +23,8 @@ import it.innove.BleManagerPackage;
 import org.reactnative.camera.RNCameraPackage;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
+// react-native-image-picker
+import com.imagepicker.ImagePickerPackage;
 // react-native-maps
 import com.airbnb.android.react.maps.MapsPackage;
 // react-native-permissions
@@ -90,6 +92,7 @@ public class PackageList {
       new BleManagerPackage(),
       new RNCameraPackage(),
       new RNGestureHandlerPackage(),
+      new ImagePickerPackage(),
       new MapsPackage(),
       new RNPermissionsPackage(),
       new ReanimatedPackage(),

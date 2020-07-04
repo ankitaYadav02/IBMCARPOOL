@@ -15,6 +15,7 @@ import {
     DrawerContentScrollView,
     DrawerItem
 } from '@react-navigation/drawer';
+import Toast from 'react-native-toast-message'
 import AsyncStorage from '@react-native-community/async-storage'
 
 export function DrawerContent(props) {
@@ -25,8 +26,17 @@ export function DrawerContent(props) {
         try {
             await AsyncStorage.removeItem('token');
              props.navigation.navigate('Home')
+             Toast.show({
+                text1: 'We Will miss You',
+                text2: 'You Log Out Successfully 👋'
+              })
           } catch (error) {
             console.log(error.message);
+            Toast.show({
+                type:'error',
+                text1: 'Error',
+                text2: 'Oops!Something went wrong...'
+              })
           }
     }
     useEffect(async()=>{
