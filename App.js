@@ -4,11 +4,13 @@ import BluetoothStateManager from 'react-native-bluetooth-state-manager';
 import {StyleSheet, View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+// import Icon from 'react-native-vector-icons';
 import {
   createDrawerNavigator,
   DrawerContentOptions,
 } from '@react-navigation/drawer';
 // import Icon from 'react-native-vector-icons';
+import Toast from 'react-native-toast-message';
 import Signup from './screens/signup';
 import SignIn from './screens/SignIn';
 import Home from './screens/home';
@@ -24,8 +26,10 @@ import Healthscanner from './screens/scanner';
 import {DrawerContent} from './screens/drawerContent';
 import Payment from './screens/payment';
 import Recipt from './screens/pay';
+import Forgotpassword from './screens/forgotpassword';
+import Searchroute from './screens/searchRoute';
+import Addroute from './screens/addRoute';
 import AsyncStorage from '@react-native-community/async-storage';
-
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 function Dashboard() {
@@ -60,38 +64,17 @@ function App() {
   return (
     <View style={styles.container}>
       <Stack.Navigator headerMode="none">
-        {/* {
-          login==null ?(
-          <>
-          <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="Signup" component={Signup} />
-          <Stack.Screen name="SignIn" component={SignIn} />
-          </>)
-          :
-          login==true? (
-          <>
-          <Stack.Screen name="WELCOME" component={Dashboard} />
-          <Stack.Screen name="Check" component={Healthcheck} />
-          </>)
-          :(
-          <>
-          <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="Signup" component={Signup} />
-          <Stack.Screen name="SignIn" component={SignIn} />
-          </>)
-        } */}
-
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="SignIn" component={SignIn} />
-        <Stack.Screen name="Healthcheck" component={Healthcheck} />
-        <Stack.Screen name="Welcome" component={Dashboard} />
-        <Stack.Screen name="ADD ROUTE" component={AddRoute} />
-        <Stack.Screen name="WAITING" component={Driverwaiting} />
-        <Stack.Screen name="SEARCH ROUTE" component={SearchRoute} />
-        <Stack.Screen name="BOOK IT !" component={Payment} />
+        <Stack.Screen name="Forgot Password" component={Forgotpassword} />
+        <Stack.Screen name="Check" component={Healthcheck} />
+        <Stack.Screen name="WELCOME" component={Dashboard} />
+        <Stack.Screen name="Pay" component={Payment} />
         <Stack.Screen name="Recipt" component={Recipt} />
+        <Stack.Screen name="Add Route" component={Addroute} />
       </Stack.Navigator>
+      <Toast ref={(ref) => Toast.setRef(ref)} />
     </View>
   );
 }
@@ -110,25 +93,3 @@ const styles = StyleSheet.create({
     backgroundColor: '#e0e0e0',
   },
 });
-
-// import React from "react";
-// //import "../assets/styles.css";
-// import {View} from 'react-native'
-// import { Elements } from "@stripe/react-stripe-js";
-// import { loadStripe } from "@stripe/stripe-js";
-// import CheckoutForm from "./screens/checkoutForm";
-
-// const stripePromise = loadStripe("pk_test_51GyzrWDFA9LPafghMpH3WW1hBPUDcZqs2UdwJTqVPMxaj0aaEtpC4TWNz9s8zskfqDyWozjNXHLVcCVtrOGcoTTw00fLXGCxEQ");
-
-// const App = () => {
-//   return (
-//     <View>
-//           <Elements stripe={stripePromise}>
-//             <CheckoutForm />
-//           </Elements>
-
-//     </View>
-//   );
-// };
-
-// export default App;

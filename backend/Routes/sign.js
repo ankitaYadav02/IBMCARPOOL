@@ -6,9 +6,16 @@ const user = require('../Models/user');
 const jwt = require('jsonwebtoken');
 const {JWT_TOKEN} = require('../config/key')
 const requireLogin = require('../middleware/requireLogin')
-
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var nodemailer = require('nodemailer');
+const Transport = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: 'ankitarao01011998@gmail.com',
+        pass: 'lovegames' 
+      }  
+})
 const router = Router();
-
 router.post('/signup',(req,res)=>{
     const {name,email,ContactNo,password} = req.body
     //console.log(name,email,contactNo,password,cough,cold,fever)
@@ -29,6 +36,17 @@ router.post('/signup',(req,res)=>{
                 })
                 User.save()
                     .then(User => {
+                        Transport.sendMail({
+                            to:User.email,
+                            from:"ankitarao01011998@gmail.com",
+                            subject:"SignedUp Successfully",
+                            html:"<h1>WELCOME TO CAREPOOL FAMILY</h1>"
+                        }).then((err,result)=>{
+                            if(err){
+                              console.log(err)
+                            }
+                            console.log('email sent')
+                        })
                         res.json(User)
                     })
                     .catch(err => {
@@ -85,5 +103,32 @@ router.get('/getuser',requireLogin,(req,res)=>{
         res.status(200).json(User)
     })
 })
+
+router.post('/requestpassword',(req,res)=>{
+    const{email,password} = req.body
+    console.log(req.body)
+  user.findOne({email:email})
+  .then(User=>{
+    if(!User){
+        res.status(422).json({error:'invalid email or password'})  
+    }
+    bcrypt.hash(password, 12)
+    .then(hashedpassword=>{
+        console.log(hashedpassword)
+     User.password=hashedpassword
+     User.save().then((saveduser)=>{
+         res.json({message:"password updated successfully"})
+  }).catch(err=>{
+      res.status(422).json({error:err})
+  })
+}).catch(err=>{
+    res.status(422).json({error:err})
+})
+}).catch(err=>{
+    res.status(422).json({error:err})
+})
+})
+
+router.post
 
 module.exports = router;

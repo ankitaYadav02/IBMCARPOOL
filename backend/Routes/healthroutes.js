@@ -1,3 +1,4 @@
+//Require necessary modules and files
 const express = require('express');
 const bcrypt = require('bcrypt');
 const health = require('../Models/health');
@@ -6,6 +7,7 @@ const {Router} = require('express');
 
 const router = Router();
 
+//create route for POST API for healthdetails sent by user from frontend
 router.post('/healthdetails', requireLogin, (req, res) => {
   const {
     DryCough,
@@ -34,6 +36,7 @@ router.post('/healthdetails', requireLogin, (req, res) => {
     });
 });
 
+//Create route for GET API for retrieving  health details of user
 router.get('/health', requireLogin, (req, res) => {
   console.log(req.user._id);
   health
@@ -46,6 +49,7 @@ router.get('/health', requireLogin, (req, res) => {
     });
 });
 
+//Create route for PUT API to update health details
 router.put('/updatehealth', requireLogin, (req, res) => {
   console.log(req.user._id);
   health
@@ -74,3 +78,4 @@ router.put('/updatehealth', requireLogin, (req, res) => {
 });
 
 module.exports = router;
+//EXport file

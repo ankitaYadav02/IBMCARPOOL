@@ -1,9 +1,7 @@
 import React, {Component, useState} from 'react';
-import AsyncStorage from '@react-native-community/async-storage';
-
 import {
   Text,
-  Image,
+  ScrollView,
   View,
   StyleSheet,
   TouchableOpacity,
@@ -11,138 +9,157 @@ import {
   TextInput,
 } from 'react-native';
 import {Appbar, Button} from 'react-native-paper';
-
+import AsyncStorage from '@react-native-community/async-storage';
+import Toast from 'react-native-toast-message';
 function SearchRoute(props) {
-  const [name, setname] = useState('');
-  const [contactNo, setcontactNo] = useState('');
-  const [pickUp, setpickUp] = useState('');
-  const [destination, setdestination] = useState('');
-  const [time, settime] = useState('');
-  const [healthStatus, sethealthStatus] = useState('');
+  const [name, setName] = useState('');
+  const [contactNo, setContactNo] = useState('');
+  const [pickUp, setPickUp] = useState('');
+  const [destination, setDestination] = useState('');
+  const [time, setTime] = useState('');
+  const [healthStatus, setHealthStatus] = useState('');
 
   const book = async () => {
-    let collection = {};
-    (collection.name = this.state.name),
-      (collection.contactNo = this.state.contactNo),
-      (collection.pickUp = this.state.pickUp),
-      (collection.destination = this.state.destination),
-      (collection.time = this.state.time),
-      (collection.healthStatus = this.state.healthStatus),
-      console.log(collection);
+    console.log(name, contactNo, pickUp, destination, time, healthStatus);
     const token = await AsyncStorage.getItem('token');
     console.log(token);
-    fetch('http://192.168.43.27:5000/searchRoute', {
+    fetch('http://192.168.43.103:5000/searchRoute', {
       method: 'post',
       headers: {
         'Content-Type': 'application/json',
         Authorization: 'Bearer ' + token,
       },
-      body: JSON.stringify(collection),
+      body: JSON.stringify({
+        name,
+        contactNo,
+        pickUp, //Stringify for data to come in a row
+        destination,
+        time,
+        healthStatus,
+      }),
     })
-      .then((response) => response.json())
-      .then((collection) => {
-        console.log('Success:', collection);
+      //apply promises and catch errors
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result);
+        Toast.show({
+          text1: 'Hurray',
+          text2: 'You tested yourself successfully 👋',
+        });
+        //props.navigation.navigate('WELCOME')
       })
-      .catch((error) => {
-        console.error('Error:', error);
+      .catch((err) => {
+        console.log(err);
+        Toast.show({
+          type: 'error',
+          text1: 'Error',
+          text2: 'Oops!Something went wrong...',
+        });
       });
   };
 
   return (
-    <View style={styles.container}>
-      <View
-        style={{
-          position: 'absolute',
-          top: '10%',
-          alignSelf: 'auto',
-        }}>
-        <TextInput
-          placeholder="Name"
-          style={styles.input}
-          onChangeText={(text) => setname(text)}
-        />
-      </View>
-
-      <View
-        style={{
-          position: 'absolute',
-          top: '20%',
-          alignSelf: 'auto',
-        }}>
-        <TextInput
-          placeholder="Contact Number"
-          style={styles.input}
-          onChangeText={(text) => setcontactNo(text)}
-        />
-      </View>
-      <View
-        style={{
-          position: 'absolute',
-          top: '30%',
-          alignSelf: 'auto',
-        }}>
-        <TextInput
-          placeholder="PickUp"
-          style={styles.input}
-          onChangeText={(text) => setpickUp(text)}
-        />
-      </View>
-      <View
-        style={{
-          position: 'absolute',
-          top: '40%',
-          alignSelf: 'auto',
-        }}>
-        <TextInput
-          placeholder="Destination"
-          style={styles.input}
-          onChangeText={(text) => setdestination(text)}
-        />
-      </View>
-      <View
-        style={{
-          position: 'absolute',
-          top: '50%',
-          alignSelf: 'auto',
-        }}>
-        <TextInput
-          placeholder="Time"
-          style={styles.input}
-          onChangeText={(text) => settime(text)}
-        />
-      </View>
-      <View
-        style={{
-          position: 'absolute',
-          top: '60%',
-          alignSelf: 'auto',
-        }}>
-        <TextInput
-          placeholder="Health Status"
-          style={styles.input}
-          onChangeText={(text) => sethealthStatus(text)}
-        />
-      </View>
-
-      <View
-        style={{
-          position: 'absolute',
-          top: '90%',
-          paddingLeft: 110,
-          alignSelf: 'auto',
-        }}>
-        <Button
-          style={styles.btn}
-          onPress={() => {
-            book();
-            props.navigation.navigate('BOOK IT !');
+    // ScrollView to enable user scroll screen
+    <ScrollView>
+      {/* Creating view for user to enter details */}
+      <View style={styles.container}>
+        <View
+          style={{
+            position: 'absolute',
+            top: '10%',
+            alignSelf: 'auto',
           }}>
-          BOOK IT
-        </Button>
+          <TextInput
+            placeholder="Name"
+            style={styles.input}
+            onChangeText={(text) => setName(text)}
+          />
+        </View>
+
+        <View
+          style={{
+            position: 'absolute',
+            top: '20%',
+            alignSelf: 'auto',
+          }}>
+          <TextInput
+            placeholder="Contact Number"
+            style={styles.input}
+            onChangeText={(text) => setContactNo(text)}
+          />
+        </View>
+        <View
+          style={{
+            position: 'absolute',
+            top: '30%',
+            alignSelf: 'auto',
+          }}>
+          <TextInput
+            placeholder="PickUp"
+            style={styles.input}
+            onChangeText={(text) => setPickUp(text)}
+          />
+        </View>
+        <View
+          style={{
+            position: 'absolute',
+            top: '40%',
+            alignSelf: 'auto',
+          }}>
+          <TextInput
+            placeholder="Destination"
+            style={styles.input}
+            onChangeText={(text) => setDestination(text)}
+          />
+        </View>
+        <View
+          style={{
+            position: 'absolute',
+            top: '50%',
+            alignSelf: 'auto',
+          }}>
+          <TextInput
+            placeholder="Time"
+            style={styles.input}
+            onChangeText={(text) => setTime(text)}
+          />
+        </View>
+        <View
+          style={{
+            position: 'absolute',
+            top: '60%',
+            alignSelf: 'auto',
+          }}>
+          <TextInput
+            placeholder="Health Status"
+            style={styles.input}
+            onChangeText={(text) => setHealthStatus(text)}
+          />
+        </View>
+
+        <View
+          style={{
+            position: 'absolute',
+            top: '90%',
+            paddingLeft: 110,
+            alignSelf: 'auto',
+          }}>
+          <Button
+            style={styles.btn}
+            onPress={() => {
+              book();
+            }}
+            //props.navigation.navigate('BOOK IT !');
+          >
+            BOOK IT
+          </Button>
+        </View>
       </View>
-    </View>
+    </ScrollView>
   );
 }
+
+//Applying styles to above code
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#91b7e6',
@@ -179,3 +196,4 @@ const styles = StyleSheet.create({
   },
 });
 export default SearchRoute;
+//Exporting file

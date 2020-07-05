@@ -1,49 +1,78 @@
+//Import necessary modules
 import React, {useState} from 'react';
 import {StyleSheet, Text, Image, View, TextInput} from 'react-native';
 import {Button, Appbar} from 'react-native-paper';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import AsyncStorage from '@react-native-community/async-storage';
 import LottieView from 'lottie-react-native';
+import Toast from 'react-native-toast-message';
+
+//Create functional component
 function SignIn(props) {
+  //setting initial state
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  //function on submit
   const submitDetails = () => {
     console.log(email, password);
     fetch('http://192.168.43.27:5000/signin', {
+      // Fetch API to post data on backend
       method: 'post',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
+        //Data come in JSON format and stringified to come in arow
         email,
         password,
       }),
     })
+      //Promise and catching errors in response
       .then((res) => res.json())
       .then(async (result) => {
         if (result.error) {
           console.log(result.error);
+          //Toasts for notification
+          Toast.show({
+            type: 'error',
+            text1: 'Error',
+            text2: 'Oops!Something went wrong...',
+          });
         }
         console.log(result);
+
+        //waiting till getting a token for authentication
         try {
           await AsyncStorage.setItem('token', result);
-          props.navigation.replace('Healthcheck');
+          Toast.show({
+            text1: 'Hurray',
+            text2: 'You Signed In Successfully 👋',
+          });
+          props.navigation.replace('Check'); // navigation for switching between screens
           //props.navigation.navigate('WELCOME')
           // props.navigation.navigate('Pay')
         } catch (error) {
           console.log(error.message);
+          Toast.show({
+            type: 'error',
+            text1: 'Error',
+            text2: 'Oops!Something went wrong...',
+          });
         }
       })
       .catch((err) => {
         console.log(err);
-      })
-      .catch((err) => {
-        console.log(err);
+        Toast.show({
+          type: 'error',
+          text1: 'Error',
+          text2: 'Oops!Something went wrong...',
+        });
       });
   };
 
   return (
+    //User's View containing buttons and textinputs for interaction
     <View>
       {/* <Appbar.Header>
         <Appbar.Content
@@ -82,11 +111,13 @@ function SignIn(props) {
             style={styles.buttons}
             onPress={() => {
               submitDetails();
-              props.navigation.navigate('Healthcheck');
+              //props.navigation.navigate('WELCOME')
             }}>
             Sign In
           </Button>
-          <Button style={styles.buttons} onPress={() => console.log('pressed')}>
+          <Button
+            style={styles.buttons}
+            onPress={() => props.navigation.navigate('Forgot Password')}>
             Forgot Password
           </Button>
           <TouchableOpacity>
@@ -102,6 +133,9 @@ function SignIn(props) {
   );
 }
 export default SignIn;
+//Export file
+
+//Applying styles to above code
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -141,5 +175,8 @@ const styles = StyleSheet.create({
     width: 90,
     height: 90,
     marginTop: 20,
+  },
+  Header: {
+    alignItems: 'center',
   },
 });

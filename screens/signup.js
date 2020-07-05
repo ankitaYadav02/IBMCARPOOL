@@ -1,3 +1,4 @@
+//Import necessary modules
 import React, {useState} from 'react';
 import {
   StyleSheet,
@@ -11,15 +12,17 @@ import {
 import {Button, Appbar} from 'react-native-paper';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import LottieView from 'lottie-react-native';
+import Toast from 'react-native-toast-message';
 
+//Create functional components
 function SignUp(props) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [ContactNo, setContactNo] = useState('');
   const SubmitDetails = () => {
-    console.log(name, email, password, ContactNo);
-    fetch('http://192.168.43.27:5000/signup', {
+    console.log(name, email, password, ContactNo); // Fetch API for sending datta to backend
+    fetch('http://192.168.43.103:5000/signup', {
       method: 'post',
       headers: {
         'Content-Type': 'application/json',
@@ -31,21 +34,28 @@ function SignUp(props) {
         ContactNo,
       }),
     })
+      //promises for callbacks and catching errors
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-      })
-
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        props.navigation.navigate('SignIn');
+        //Toasts for notifications
+        Toast.show({
+          text1: 'Hurray',
+          text2: 'You Signed Up Successfully 👋',
+        });
+        props.navigation.navigate('SignIn'); //navigating to different screen
       })
       .catch((err) => {
         console.log(err);
+        Toast.show({
+          type: 'error',
+          text1: 'Error',
+          text2: 'Oops!Something went wrong...',
+        });
       });
   };
   return (
+    //View for user having TextInputs for the user to enter details
     <ScrollView>
       <LottieView
         style={styles.logo}
@@ -102,6 +112,9 @@ function SignUp(props) {
   );
 }
 export default SignUp;
+//Export file
+
+//Applying styles to above code
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -122,7 +135,7 @@ const styles = StyleSheet.create({
   },
   buttons: {
     width: 250,
-    height: 60,
+    height: 55,
     backgroundColor: '#f2f3f7',
     margin: 10,
     padding: 8,

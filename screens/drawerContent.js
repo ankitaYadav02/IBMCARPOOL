@@ -1,3 +1,4 @@
+//importing necessary modules
 import React, {useState, useEffect} from 'react';
 import {View, StyleSheet} from 'react-native';
 import {
@@ -12,8 +13,10 @@ import {
   Switch,
 } from 'react-native-paper';
 import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
+import Toast from 'react-native-toast-message';
 import AsyncStorage from '@react-native-community/async-storage';
 
+//Create functional component
 export function DrawerContent(props) {
   const [Name, setName] = useState('');
   const [Email, setEmail] = useState('');
@@ -22,15 +25,28 @@ export function DrawerContent(props) {
     try {
       await AsyncStorage.removeItem('token');
       props.navigation.navigate('Home');
+
+      //Toasts for notification
+      Toast.show({
+        text1: 'We Will miss You',
+        text2: 'You Log Out Successfully 👋',
+      });
     } catch (error) {
+      //Catching errors
       console.log(error.message);
+      Toast.show({
+        type: 'error',
+        text1: 'Error',
+        text2: 'Oops!Something went wrong...',
+      });
     }
   };
   useEffect(async () => {
     console.log('=============');
     const token = await AsyncStorage.getItem('token');
     console.log(token);
-    fetch('http://192.168.43.27:5000/getuser', {
+    fetch('http://192.168.43.103:5000/getuser', {
+      //Fetch API for updating data on backend
       headers: {
         'Content-Type': 'application/json',
         Authorization: 'Bearer ' + token,
@@ -44,6 +60,7 @@ export function DrawerContent(props) {
       });
   }, []);
   return (
+    //Create View for the user to interact
     <View style={{flex: 1}}>
       <DrawerContentScrollView {...props}>
         <View style={styles.drawerContent}>
@@ -60,11 +77,12 @@ export function DrawerContent(props) {
             </View>
           </View>
 
+          {/* //Drawer items , navigating to different screens */}
           <Drawer.Section style={styles.drawerSection}>
             <DrawerItem
               label="Welcome"
               onPress={() => {
-                props.navigation.navigate('Welcome');
+                props.navigation.navigate('WELCOME');
               }}
             />
             <DrawerItem
@@ -101,6 +119,7 @@ export function DrawerContent(props) {
   );
 }
 
+//Applying styles to above code
 const styles = StyleSheet.create({
   drawerContent: {
     flex: 1,

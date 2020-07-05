@@ -1,3 +1,4 @@
+//Import necessary modules
 import React, {useState} from 'react';
 import {
   StyleSheet,
@@ -11,23 +12,33 @@ import {Button, Card, Title, Appbar} from 'react-native-paper';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import LottieView from 'lottie-react-native';
 import AsyncStorage from '@react-native-community/async-storage';
+import Toast from 'react-native-toast-message';
 
+//Create functional component conatining initial states
 function Healthcheck(props) {
   const [DryCough, setDryCough] = useState(null);
   const [tiredness, setTiredness] = useState(null);
   const [fever, setfever] = useState(null);
   const [sorethroat, setsorethroat] = useState(null);
   const [diarrhoea, setDiarrhoea] = useState(null);
+
+  //function of submit
   const submitDetails = async () => {
     console.log(DryCough, tiredness, fever, sorethroat, diarrhoea);
+
+    //waiting for token for authentication
     const token = await AsyncStorage.getItem('token');
     // console.log(token)
+
+    //Fetch API to post data on backend
     fetch('http://192.168.43.27:5000/healthdetails', {
       method: 'post',
       headers: {
         'Content-Type': 'application/json',
         Authorization: 'Bearer ' + token,
       },
+
+      //data sent in JSON format
       body: JSON.stringify({
         DryCough,
         tiredness,
@@ -36,10 +47,27 @@ function Healthcheck(props) {
         diarrhoea,
       }),
     })
+      //Promises and catching errors
       .then((res) => res.json())
       .then((result) => {
         console.log(result);
-        props.navigation.navigate('Welcome');
+
+        //Toasts for notifications
+        Toast.show({
+          text1: 'Hurray',
+          text2: 'You tested yourself successfully 👋',
+        });
+
+        //Navigating to different screen
+        props.navigation.navigate('WELCOME');
+      })
+      .catch((err) => {
+        console.log(err);
+        Toast.show({
+          type: 'error',
+          text1: 'Error',
+          text2: 'Oops!Something went wrong...',
+        });
       })
       .catch((err) => {
         console.log(err);
@@ -47,6 +75,7 @@ function Healthcheck(props) {
   };
 
   return (
+    //ScrollView to scroll user's screen
     <ScrollView>
       {/* <Appbar.Header>
         <Appbar.Content
@@ -62,6 +91,8 @@ function Healthcheck(props) {
       /> */}
       {/* </Card.Content>
       </Card> */}
+
+      {/* //Create View for user to interact using cards , buttons , texts */}
       <LottieView
         style={styles.logo}
         source={require('../car.json')}
@@ -150,6 +181,9 @@ function Healthcheck(props) {
   );
 }
 export default Healthcheck;
+//Export file
+
+//Applying Styles to above code
 const styles = StyleSheet.create({
   container: {
     flex: 1,

@@ -1,3 +1,4 @@
+//Importing required modules
 import React from 'react';
 import {
   ScrollView,
@@ -11,16 +12,18 @@ import {Card, Title, Paragraph, Appbar} from 'react-native-paper';
 import Video from 'react-native-video';
 import MarqueeText from 'react-native-marquee';
 
+//passing props for states
 const Guidelines = (props) => (
   <ScrollView style={styles.container}>
     <Appbar.Header>
       <Appbar.Action
         icon="dots-vertical"
-        onPress={() => props.navigation.openDrawer()}
+        onPress={() => props.navigation.openDrawer()} //opens up drawer on pressing vertical-dots
       />
       <Appbar.Content title="Guidelines" />
     </Appbar.Header>
 
+    {/* //creating a view that will contain text moving on the screen using marquee modules */}
     <View style={styles.container1}>
       <MarqueeText
         style={({fontSize: 34}, {fontStyle: 'bold'})}
@@ -41,7 +44,10 @@ const Guidelines = (props) => (
           )
         }>
         For more Information about COVID-19 CLICK HERE
+        {/* // function is applied on pressing above line   */}
       </Text>
+
+      {/* //Again created new view that contains videos */}
     </View>
     <SafeAreaView style={styles.Video}>
       <Video
@@ -73,8 +79,9 @@ const Guidelines = (props) => (
   </ScrollView>
 );
 
-export default Guidelines;
+export default Guidelines; //exporting the file
 
+//Applying styles to above code
 const styles = StyleSheet.create({
   container: {
     flex: 1,

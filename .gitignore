@@ -13,6 +13,7 @@ build/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
+node_modules
 xcuserdata
 *.xccheckout
 *.moved-aside
@@ -24,6 +25,7 @@ DerivedData
 # Android/IntelliJ
 
 build/
+node_modules
 .idea
 .gradle
 local.properties

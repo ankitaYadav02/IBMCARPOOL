@@ -1,15 +1,19 @@
+//Importing necessary modules
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, Alert} from 'react-native';
 import AnimatedLoader from 'react-native-animated-loader';
 
+//created a class component with constructor to store initial state
 export default class Driverwaiting extends Component {
   constructor(props) {
     super(props);
     this.state = {visible: true};
   }
 
+  // componentdidmount for mounting after first render
   componentDidMount() {
     setInterval(() => {
+      // setting interval for which loader appears on screen
       this.setState({
         visible: !this.state.visible,
       });
@@ -19,6 +23,7 @@ export default class Driverwaiting extends Component {
     const {visible} = this.state;
 
     return (
+      // return show what appears on user's screen
       <View style={styles.container}>
         {/* <Image source={require('./fare.jpg')} /> */}
         <AnimatedLoader
@@ -35,6 +40,7 @@ export default class Driverwaiting extends Component {
   }
 }
 
+//Applying styles to above code
 const styles = StyleSheet.create({
   lottie: {
     width: 100,

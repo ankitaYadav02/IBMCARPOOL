@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+//Importing necessary modules
+import React, {Component, useState, useEffect} from 'react';
 
 import {
   Text,
@@ -12,255 +13,207 @@ import {
 import {Appbar, Button} from 'react-native-paper';
 import ImagePicker from 'react-native-image-picker';
 import {ScrollView} from 'react-native-gesture-handler';
-
-class AddRoute extends Component {
-  constructor() {
-    super();
-    this.state = {
-      name: '',
-      contactNo: '',
-      pickUp: '',
-      destination: '',
-      time: '',
-      licenseNo: '',
-      photo: null,
-    };
-  }
+// import FileInput from 'react-input-file'
+function AddRoute() {
+  const [name, setName] = useState(''); //setting initial state of all the fields
+  const [contactNo, setContactNo] = useState('');
+  const [pickUp, setPickUp] = useState('');
+  const [destination, setDestination] = useState('');
+  const [time, setTime] = useState('');
+  const [licenseNo, setLicenseNo] = useState('');
+  // const[photo,setPhoto]=useState(null)
+  const [url, setUrl] = useState('');
 
   handleChoosePhoto = () => {
+    //function to handle photos from gallery
     const options = {
       noData: true,
     };
     ImagePicker.launchImageLibrary(options, (response) => {
-      if (response.uri) {
-        this.setState({photo: response});
+      //opens gallery of user enabling him to pick the image
+      console.log(response);
+      if (response.didCancel) {
+        console.log('User cancelled image picker');
+      } else if (response.error) {
+        console.log('ImagePicker Error: ', response.error);
+      } else if (response.customButton) {
+        console.log('User tapped custom button: ', response.customButton);
+        alert(response.customButton);
+      } else {
+        let newfile = {
+          uri: response.uri,
+          type: `test/${response.uri.split('.')[1]}`,
+          name: `test.${response.uri.split('.')[1]}`,
+        };
+        console.log(newfile);
+        postDetails(newfile);
       }
     });
   };
-
-  handleUploadPhoto = () => {
-    fetch('http://192.168.43.27:5000/addRoute', {
-      method: 'post',
-      body: createFormData(this.state.photo),
-    })
-      .then((response) => response.json())
-      .then((response) => {
-        console.log('upload success', response);
-        alert('Upload success!');
-        this.setState({photo: response});
-      })
-      .catch((error) => {
-        console.log('upload error', error);
-        alert('Upload failed!');
-      });
-  };
-
-  updateValue(text, field) {
-    if (field == 'name') {
-      this.setState({
-        name: text,
-      });
-    } else if (field == 'contactNo') {
-      this.setState({
-        contactNo: text,
-      });
-    } else if (field == 'pickUp') {
-      this.setState({
-        pickUp: text,
-      });
-    } else if (field == 'destination') {
-      this.setState({
-        destination: text,
-      });
-    } else if (field == 'time') {
-      this.setState({
-        time: text,
-      });
-    } else if (field == 'licenseNo') {
-      this.setState({
-        licenseNo: text,
-      });
-    }
-  }
-
-  createFormData = (photo, body) => {
+  const postDetails = (image) => {
+    console.log(image);
     const data = new FormData();
-
-    data.append('photo', {
-      name: photo.fileName,
-      type: photo.type,
-      uri:
-        Platform.OS === 'android'
-          ? photo.uri
-          : photo.uri.replace('file://', ''),
-    });
-
-    Object.keys(body).forEach((key) => {
-      data.append(key, body[key]);
-    });
-
-    return data;
+    data.append('file', image);
+    data.append('upload_preset', 'carepool');
+    data.append('cloud_name', 'ankita1297');
+    console.log(data);
+    fetch('	https://api.cloudinary.com/v1_1/ankita1297/image/upload', {
+      // fetch API to upload image on Cloudinary
+      method: 'post',
+      body: data,
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setUrl(data.url);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
-
-  submit() {
-    let collection = [];
-    (collection.name = this.state.name),
-      (collection.contactNo = this.state.contactNo),
-      (collection.pickUp = this.state.pickUp),
-      (collection.destination = this.state.destination),
-      (collection.time = this.state.time),
-      (collection.licenseNo = this.state.licenseNo),
-      (collection.photo = this.state.photo);
-    console.log(collection);
-
-    fetch('http://192.168.43.27:5000/addRoute', {
+  const submit = () => {
+    fetch('http://192.168.43.103:5000/addRoute', {
+      //Fetch API to submit the details entered by user
       method: 'post',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(collection),
+      body: JSON.stringify({
+        //Stringifying JSON data so that it comes in a row
+        name,
+        contactNo,
+        pickUp,
+        destination,
+        time,
+        licenseNo,
+        photo: url,
+      }),
     })
       .then((response) => response.json())
-      .then((collection) => {
-        console.log('Success:', collection);
+      .then((result) => {
+        console.log('Success:', result);
       })
       .catch((error) => {
         console.error('Error:', error);
       });
-  }
+  };
 
-  render() {
-    const {photo} = this.state;
-    return (
-      <ScrollView>
-        <Appbar.Header>
-          <Appbar.Content style={styles.Header} title="Add Route" />
-        </Appbar.Header>
+  return (
+    <ScrollView>
+      <Appbar.Header>
+        <Appbar.Content style={styles.Header} title="Add Route" />
+      </Appbar.Header>
 
-        <View style={styles.container}>
-          <View
-            style={{
-              position: 'absolute',
-              top: '10%',
-              alignSelf: 'auto',
-            }}>
-            <TextInput
-              placeholder="Name"
-              style={styles.input}
-              onChangeText={(text) => this.updateValue(text, 'name')}
-            />
-          </View>
-
-          <View
-            style={{
-              position: 'absolute',
-              top: '20%',
-              alignSelf: 'auto',
-            }}>
-            <TextInput
-              placeholder="Contact Number"
-              style={styles.input}
-              onChangeText={(text) => this.updateValue(text, 'contactNo')}
-            />
-          </View>
-          <View
-            style={{
-              position: 'absolute',
-              top: '30%',
-              alignSelf: 'auto',
-            }}>
-            <TextInput
-              placeholder="PickUp"
-              style={styles.input}
-              onChangeText={(text) => this.updateValue(text, 'pickUp')}
-            />
-          </View>
-          <View
-            style={{
-              position: 'absolute',
-              top: '40%',
-              alignSelf: 'auto',
-            }}>
-            <TextInput
-              placeholder="Destination"
-              style={styles.input}
-              onChangeText={(text) => this.updateValue(text, 'destination')}
-            />
-          </View>
-          <View
-            style={{
-              position: 'absolute',
-              top: '50%',
-              alignSelf: 'auto',
-            }}>
-            <TextInput
-              placeholder="Time"
-              style={styles.input}
-              onChangeText={(text) => this.updateValue(text, 'time')}
-            />
-          </View>
-          <View
-            style={{
-              position: 'absolute',
-              top: '60%',
-              alignSelf: 'auto',
-            }}>
-            <TextInput
-              placeholder="License Number"
-              style={styles.input}
-              onChangeText={(text) => this.updateValue(text, 'licenseNo')}
-            />
-          </View>
-          <View
-            style={{
-              paddingLeft: 100,
-              top: '65%',
-              alignSelf: 'auto',
-            }}>
-            {photo && (
-              <React.Fragment>
-                <Image
-                  source={{uri: photo.uri}}
-                  style={{width: 110, height: 90}}
-                />
-                <Button title="Upload" onPress={this.handleUpload} />
-              </React.Fragment>
-            )}
-          </View>
-
-          <View
-            style={{
-              position: 'absolute',
-              paddingLeft: 20,
-              top: '80%',
-              alignSelf: 'auto',
-            }}>
-            <Button style={styles.btn} onPress={this.handleChoosePhoto}>
-              Upload Sanitization Details Slip
-            </Button>
-          </View>
-          <View
-            style={{
-              position: 'absolute',
-              top: '90%',
-              paddingLeft: 110,
-              alignSelf: 'auto',
-            }}>
-            <Button
-              onPress={
-                (() => this.submit(),
-                () => this.props.navigation.navigate('WAITING'))
-              }
-              style={styles.btn}>
-              Submit
-            </Button>
-          </View>
+      {/* //creating a view with different placeholders and changing their states */}
+      <View style={styles.container}>
+        <View
+          style={{
+            position: 'absolute',
+            top: '10%',
+            alignSelf: 'auto',
+          }}>
+          <TextInput
+            placeholder="Name"
+            style={styles.input}
+            onChangeText={(text) => setName(text)}
+          />
         </View>
-      </ScrollView>
-    );
-  }
-}
 
+        <View
+          style={{
+            position: 'absolute',
+            top: '20%',
+            alignSelf: 'auto',
+          }}>
+          <TextInput
+            placeholder="Contact Number"
+            style={styles.input}
+            onChangeText={(text) => setContactNo(text)}
+          />
+        </View>
+        <View
+          style={{
+            position: 'absolute',
+            top: '30%',
+            alignSelf: 'auto',
+          }}>
+          <TextInput
+            placeholder="PickUp"
+            style={styles.input}
+            onChangeText={(text) => setPickUp(text)}
+          />
+        </View>
+        <View
+          style={{
+            position: 'absolute',
+            top: '40%',
+            alignSelf: 'auto',
+          }}>
+          <TextInput
+            placeholder="Destination"
+            style={styles.input}
+            onChangeText={(text) => setDestination(text)}
+          />
+        </View>
+        <View
+          style={{
+            position: 'absolute',
+            top: '50%',
+            alignSelf: 'auto',
+          }}>
+          <TextInput
+            placeholder="Time"
+            style={styles.input}
+            onChangeText={(text) => setTime(text)}
+          />
+        </View>
+        <View
+          style={{
+            position: 'absolute',
+            top: '60%',
+            alignSelf: 'auto',
+          }}>
+          <TextInput
+            placeholder="License Number"
+            style={styles.input}
+            onChangeText={(text) => setLicenseNo(text)}
+          />
+        </View>
+        <View
+          style={{
+            position: 'absolute',
+            paddingLeft: 20,
+            top: '80%',
+            alignSelf: 'auto',
+          }}>
+          <Button
+            style={styles.btn}
+            onPress={() => {
+              handleChoosePhoto();
+            }}>
+            Upload Sanitization Details Slip
+          </Button>
+        </View>
+        <View
+          style={{
+            position: 'absolute',
+            top: '90%',
+            paddingLeft: 110,
+            alignSelf: 'auto',
+          }}>
+          <Button
+            onPress={() => {
+              submit();
+            }}
+            style={styles.btn}>
+            Submit
+          </Button>
+        </View>
+      </View>
+    </ScrollView>
+  );
+}
+// Applying styles to above code
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#91b7e6',
@@ -297,4 +250,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AddRoute;
+export default AddRoute; //exporting the file

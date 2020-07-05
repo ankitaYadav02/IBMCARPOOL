@@ -1,4 +1,6 @@
 const express = require('express');
+//Require necessary modules and files
+
 const bcrypt = require('bcrypt');
 const requireLogin = require('../middleware/requireLogin');
 const {Router} = require('express');
@@ -6,6 +8,7 @@ const mongoose = require('mongoose');
 const passenger = require('../Models/passenger');
 const router = Router();
 
+//Create route for Post API
 router.post('/bookRoute', requireLogin, (req, res, next) => {
   passenger
     .create(req.body)
@@ -22,3 +25,4 @@ router.post('/bookRoute', requireLogin, (req, res, next) => {
 });
 
 module.exports = router;
+//Export file

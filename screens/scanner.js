@@ -12,14 +12,20 @@ import {
   Linking,
   View
 } from 'react-native';
-
+import Toast from 'react-native-toast-message'
 import QRCodeScanner from 'react-native-qrcode-scanner';
 import { RNCamera } from 'react-native-camera';
 
 class HealthScanScreen extends Component {
   onSuccess = e => {
-    Linking.openURL(e.data).catch(err =>
+    Linking.openURL(e.data).catch(err =>{
       console.error('An error occured', err)
+      Toast.show({
+        type:'error',
+        text1: 'Error',
+        text2: 'Oops!Something went wrong...'
+      })
+    }
     );
   };
 

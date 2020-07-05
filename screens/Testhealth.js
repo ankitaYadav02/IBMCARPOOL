@@ -1,9 +1,13 @@
+//Import necessary modules
 import React,{useState} from 'react';
 import { StyleSheet, Text,Image ,ScrollView } from 'react-native';
 import {Button} from 'react-native-paper'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import AsyncStorage from '@react-native-community/async-storage'
+import Toast from 'react-native-toast-message'
 
+
+//Create functional component with initial states 
 function Testhealth (props) {
   const[DryCough,setDryCough]=useState("")
   const[tiredness,setTiredness]=useState("")
@@ -13,9 +17,9 @@ function Testhealth (props) {
 
  const submitDetails=()=>{
    console.log(DryCough,tiredness,fever,sorethroat,diarrhoea)
-   const token = await AsyncStorage.getItem('token');
+   const token = await AsyncStorage.getItem('token');     // Waitng for token for authentication
    console.log(token)
-    fetch('http://192.168.43.27:5000/updatehealth',{
+    fetch('http://192.168.43.27:5000/updatehealth',{       //Fetch API to update data in backend
         method:'put',
         headers:{
             'Content-Type':'application/json',
@@ -29,15 +33,28 @@ function Testhealth (props) {
             diarrhoea
         })
     })
+    //Promises and catching erros in response
     .then(res=>res.json())
     .then(result=>{
         console.log(result)
+
+        //Toasts for notifications
+        Toast.show({
+          text1: 'Hurray',
+          text2: 'You Successfully tested yourself 👋'
+        })
     }).catch(err => {
       console.log(err)
+      Toast.show({
+        type:'error',
+        text1: 'Error',
+        text2: 'Oops!Something went wrong...'
+      })
     })
 }
      
   return (
+    //Creating a View for user to interact making use of cards and buttons
     <ScrollView>
       <Image
         style={styles.logo}
@@ -98,6 +115,9 @@ function Testhealth (props) {
   );
 }
 export default Healthcheck;
+//Export file
+
+//Applying styles to above code
 const styles = StyleSheet.create({
   container: {
     flex: 1,

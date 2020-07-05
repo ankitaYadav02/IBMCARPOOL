@@ -1,3 +1,4 @@
+// Import necessary modules before starting
 import {
   Platform,
   StyleSheet,
@@ -13,7 +14,6 @@ import {
 navigator.geolocation = require('@react-native-community/geolocation');
 import BleManager from 'react-native-ble-manager';
 import Sound from 'react-native-sound';
-// import {useBluetoothStatus} from 'react-native-bluetooth-status';
 import {Appbar, Button} from 'react-native-paper';
 import {Card} from 'react-native-elements';
 import React, {Component} from 'react';
@@ -21,7 +21,7 @@ import MapView, {PROVIDER_GOOGLE} from 'react-native-maps'; // remove PROVIDER_G
 import {TouchableOpacity} from 'react-native-gesture-handler';
 
 const BleManagerModule = NativeModules.BleManager;
-const bleManagerEmitter = new NativeEventEmitter(BleManagerModule);
+const bleManagerEmitter = new NativeEventEmitter(BleManagerModule); //declaring some constants
 
 const sound = new Sound('./dhoom.mp3');
 var list = 0;
@@ -30,6 +30,7 @@ class Welcome extends Component {
   constructor() {
     super();
     this.state = {
+      // initial state of components being set
       peripherals: new Map(),
       location: null,
     };
@@ -49,9 +50,11 @@ class Welcome extends Component {
   };
 
   componentDidMount() {
+    // In componentdidmount, state updates , ajax requests occurs
     BleManager.start({showAlert: false});
 
     this.handlerDiscover = bleManagerEmitter.addListener(
+      //listeners to update the values
       'BleManagerDiscoverPeripheral',
       this.handleDiscoverPeripheral,
     );
@@ -70,6 +73,7 @@ class Welcome extends Component {
   }
 
   handleDiscoverPeripheral = (peripheral) => {
+    //function to handle discovered peripherals
     const {peripherals} = this.state;
 
     BleManager.getDiscoveredPeripherals([]).then((item) => {
@@ -87,6 +91,7 @@ class Welcome extends Component {
     console.log(list);
     if (list == 4) {
       Alert.alert(
+        //Alert will appear containing two buttons
         'Pay Attention',
         'Passenger limit exceeded',
         [
@@ -145,10 +150,11 @@ class Welcome extends Component {
             top: '20%', //for center align
             alignSelf: 'auto', //for align to right
           }}>
-          <Button
+          <Button //On pressing this button it will navigate to another screen
             style={styles.buttons}
             mode="outlined"
             onPress={() => this.props.navigation.navigate('ADD ROUTE')}>
+            {' '}
             ADD ROUTE
           </Button>
         </View>
@@ -159,7 +165,7 @@ class Welcome extends Component {
             top: '40%',
             alignSelf: 'auto',
           }}>
-          <Button
+          <Button //On pressing this button it will navigate to another screen
             style={styles.buttons}
             mode="outlined"
             onPress={() => this.props.navigation.navigate('SEARCH ROUTE')}>
@@ -168,7 +174,9 @@ class Welcome extends Component {
 
           <View style={styles.view}>
             <TouchableOpacity onPress={this.findCoordinates}>
-              <Text style={styles.welcome}>Enable social distancing?</Text>
+              {' '}
+              <Text style={styles.welcome}>Enable social distancing?</Text>{' '}
+              {/* //calling function on pressing the text */}
               {/* <Text>Location: {this.state.location}</Text> */}
             </TouchableOpacity>
           </View>
@@ -178,6 +186,7 @@ class Welcome extends Component {
   }
 }
 
+//Applying styles to above code
 const styles = StyleSheet.create({
   container: {
     ...StyleSheet.absoluteFillObject,
@@ -226,3 +235,4 @@ const styles = StyleSheet.create({
   },
 });
 export default Welcome;
+//Export file
